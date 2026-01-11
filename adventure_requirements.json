@@ -1,0 +1,4547 @@
+{
+  "generated_at": "2026-01-04T01:19:25.468338+00:00",
+  "source": "https://www.scouting.org/programs/cub-scouts/adventures/",
+  "adventure_count": 131,
+  "adventures": [
+    {
+      "id": 203065,
+      "slug": "a-bear-goes-fishing",
+      "title": "A Bear Goes Fishing",
+      "link": "https://www.scouting.org/cub-scout-adventures/a-bear-goes-fishing/",
+      "ranks": [
+        {
+          "id": 16785,
+          "name": "Bear – 3rd Grade",
+          "slug": "bear"
+        }
+      ],
+      "requirement_count": 6,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Learn about three types of fish in your area."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Learn about your local fishing regulations with your den leader or an adult."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "List three of the regulations you learned about, and one reason each regulation exists."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Become familiar with the safe use of the fishing equipment you will be using on your outing."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Learn the proper way to attach the hook, lure, or fly to the line."
+        },
+        {
+          "heading": "Requirement 6",
+          "text": "Go on a fishing adventure, and for 30 minutes or more, put into practice the things you learned about fish and fishing equipment."
+        }
+      ]
+    },
+    {
+      "id": 198697,
+      "slug": "a-wolf-goes-fishing",
+      "title": "A Wolf Goes Fishing",
+      "link": "https://www.scouting.org/cub-scout-adventures/a-wolf-goes-fishing/",
+      "ranks": [
+        {
+          "id": 16784,
+          "name": "Wolf – 2nd Grade",
+          "slug": "wolf"
+        }
+      ],
+      "requirement_count": 5,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Identify the type of water you will be fishing in and what type of fish live in the water."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Learn about the different types of bait used to attract fish."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Demonstrate a proper cast for the pole or rod you are using."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Learn the rules of fishing safely."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "With your den, pack, or family, go fishing."
+        }
+      ]
+    },
+    {
+      "id": 198699,
+      "slug": "adventures-in-coins",
+      "title": "Adventures in Coins",
+      "link": "https://www.scouting.org/cub-scout-adventures/adventures-in-coins/",
+      "ranks": [
+        {
+          "id": 16784,
+          "name": "Wolf – 2nd Grade",
+          "slug": "wolf"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Identify different parts of a coin."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Find the mint mark on a coin and identify the mint facility where it was made and the year it was made."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Play a coin game."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Choose a coin that interests you and make a coin rubbing. List information next to the coin detailing the pictures on it, the year it was made, and the mint where it was made."
+        }
+      ]
+    },
+    {
+      "id": 198701,
+      "slug": "air-of-the-wolf",
+      "title": "Air of the Wolf",
+      "link": "https://www.scouting.org/cub-scout-adventures/air-of-the-wolf/",
+      "ranks": [
+        {
+          "id": 16784,
+          "name": "Wolf – 2nd Grade",
+          "slug": "wolf"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Make a paper airplane and fly it five times. Record the flight distance and time."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Make a paper airplane of a different design and fly it five times. Record the flight distance and time."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Compare and contrast the two paper airplanes by distance and flight times."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Build a flying object that is not a paper airplane."
+        }
+      ]
+    },
+    {
+      "id": 204646,
+      "slug": "aquanaut",
+      "title": "Aquanaut",
+      "link": "https://www.scouting.org/cub-scout-adventures/aquanaut/",
+      "ranks": [
+        {
+          "id": 16786,
+          "name": "Webelos – 4th Grade",
+          "slug": "webelos"
+        }
+      ],
+      "requirement_count": 6,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "State the safety precautions you need to take before doing any swimming activity."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Explain the meaning of “order of rescue” and demonstrate the reach and throw rescue techniques from land."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Learn how to prevent and treat hypothermia."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Attempt to tread water."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Attempt Scouting America swimmer test."
+        },
+        {
+          "heading": "Requirement 6",
+          "text": "Have 30 minutes, or more, of free swim time where you practice the Buddy System and stay within your ability group. The qualified adult supervision should conduct at least three buddy checks per half hour swimming."
+        }
+      ]
+    },
+    {
+      "id": 204647,
+      "slug": "art-explosion",
+      "title": "Art Explosion",
+      "link": "https://www.scouting.org/cub-scout-adventures/art-explosion/",
+      "ranks": [
+        {
+          "id": 16786,
+          "name": "Webelos – 4th Grade",
+          "slug": "webelos"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Create a piece of art by exploring drawing techniques using pencils."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Using a digital image, explore the effect of filters by changing an image using different editing or in-camera techniques."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Create a piece of art using paint as your medium."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Create a piece of art combining at least two media."
+        }
+      ]
+    },
+    {
+      "id": 204648,
+      "slug": "aware-and-care",
+      "title": "Aware and Care",
+      "link": "https://www.scouting.org/cub-scout-adventures/aware-and-care/",
+      "ranks": [
+        {
+          "id": 16786,
+          "name": "Webelos – 4th Grade",
+          "slug": "webelos"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Do an activity that shows the challenges of a being visually impaired."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Do an activity that shows the challenges of being hearing impaired."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Explore barriers to access."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Meet someone who has a disability or someone who works with people with disabilities about what obstacles they must overcome and how they do it."
+        }
+      ]
+    },
+    {
+      "id": 203066,
+      "slug": "balancing-bears",
+      "title": "Balancing Bears",
+      "link": "https://www.scouting.org/cub-scout-adventures/balancing-bears/",
+      "ranks": [
+        {
+          "id": 16785,
+          "name": "Bear – 3rd Grade",
+          "slug": "bear"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Make trail mix using trail mix math."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Identify an animal that has a pattern to its physical appearance. Investigate how the animal uses its pattern."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Find examples of bilateral symmetry in nature."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Find examples of radial symmetry in nature."
+        }
+      ]
+    },
+    {
+      "id": 203067,
+      "slug": "baloo-the-builder",
+      "title": "Baloo the Builder",
+      "link": "https://www.scouting.org/cub-scout-adventures/baloo-the-builder/",
+      "ranks": [
+        {
+          "id": 16785,
+          "name": "Bear – 3rd Grade",
+          "slug": "bear"
+        }
+      ],
+      "requirement_count": 5,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Learn about some basic tools and the proper use of each tool. Learn about and understand the need for safety when you work with tools."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Practice using four of the tools you learned about in requirement 1."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Choose a project to build."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Determine the tools and materials needed to build your project in requirement 3."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Build your project."
+        }
+      ]
+    },
+    {
+      "id": 203060,
+      "slug": "bear-habitat",
+      "title": "Bear Habitat",
+      "link": "https://www.scouting.org/cub-scout-adventures/bear-habitat/",
+      "ranks": [
+        {
+          "id": 16785,
+          "name": "Bear – 3rd Grade",
+          "slug": "bear"
+        }
+      ],
+      "requirement_count": 9,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Prepare for a one-mile walk by gathering the Cub Scout Six Essentials and weather appropriate clothing and shoes."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "“Know Before You Go” Identify the location of your walk on a map and confirm your one-mile route."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "“Choose the Right Path” Learn about the path and surrounding area you will be walking on."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "“Trash your Trash” Make a plan for what you will do with your personal trash or trash you find along the trail."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "“Leave What You Find” Take pictures along your walk or bring a sketchbook to draw five things that you want to remember on your walk."
+        },
+        {
+          "heading": "Requirement 6",
+          "text": "“Be Careful with Fire” Determine the fire danger rating along your path."
+        },
+        {
+          "heading": "Requirement 7",
+          "text": "“Respect Wildlife” From a safe distance, identify as you look up, down, and around you, six signs of any mammals, birds, insects, reptiles."
+        },
+        {
+          "heading": "Requirement 8",
+          "text": "“Be Kind to Other Visitors” Identify what you need to do as a den to be kind to others on the path."
+        },
+        {
+          "heading": "Requirement 9",
+          "text": "Go on your one-mile walk while practicing your Leave No Trace Principles for Kids."
+        }
+      ]
+    },
+    {
+      "id": 203061,
+      "slug": "bear-strong",
+      "title": "Bear Strong",
+      "link": "https://www.scouting.org/cub-scout-adventures/bear-strong/",
+      "ranks": [
+        {
+          "id": 16785,
+          "name": "Bear – 3rd Grade",
+          "slug": "bear"
+        }
+      ],
+      "requirement_count": 5,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Sample food from three of the following food groups: protein, vegetables, fruits, dairy, and grains."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Be active for 30 minutes with your den or at least one other person that includes both stretching and moving."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Be active for 15 minutes doing personal exercises that include cardio, muscular strength, and flexibility."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Do a relaxing activity for 10 minutes."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Review your Scouting America Annual Health and Medical record with your parent or guardian. Discuss your ability to participate in den and pack activities."
+        }
+      ]
+    },
+    {
+      "id": 203068,
+      "slug": "bears-afloat",
+      "title": "Bears Afloat",
+      "link": "https://www.scouting.org/cub-scout-adventures/bears-afloat/",
+      "ranks": [
+        {
+          "id": 16785,
+          "name": "Bear – 3rd Grade",
+          "slug": "bear"
+        }
+      ],
+      "requirement_count": 7,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Before attempting requirements 6 and 7 for this Adventure, you must pass Scouting America swimmer test."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Pick a paddle craft you’ll use to complete all requirements: canoe, kayak, or stand-up paddleboard."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "With your den or an adult, discuss the role of qualified adult supervision at a paddle craft activity."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Explain the safety rules to follow when safely using a paddle craft."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Discover how to tell if a life jacket is the correct size and approved for your paddle craft activity. Demonstrate how to wear it."
+        },
+        {
+          "heading": "Requirement 6",
+          "text": "Explore how your paddle craft responds as you move your paddle through the water from different places."
+        },
+        {
+          "heading": "Requirement 7",
+          "text": "Have 30 minutes, or more, of canoe, kayak, or stand-up paddleboard paddle time."
+        }
+      ]
+    },
+    {
+      "id": 203069,
+      "slug": "bears-on-bikes",
+      "title": "Bears on Bikes",
+      "link": "https://www.scouting.org/cub-scout-adventures/bears-on-bikes/",
+      "ranks": [
+        {
+          "id": 16785,
+          "name": "Bear – 3rd Grade",
+          "slug": "bear"
+        }
+      ],
+      "requirement_count": 7,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Show how to properly wear a bicycle helmet."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Decide what you should wear when riding a bike."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Demonstrate proper hand signals."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Demonstrate how to adjust saddle height."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Demonstrate how to operate brakes."
+        },
+        {
+          "heading": "Requirement 6",
+          "text": "Learn how to use a pump to inflate your tires. Discuss why riding with low-pressure or flat tires is unsafe and can cause damage to your bike."
+        },
+        {
+          "heading": "Requirement 7",
+          "text": "With your family, den, or pack, follow the buddy system and go on a 30-minute bike ride."
+        }
+      ]
+    },
+    {
+      "id": 209401,
+      "slug": "bobcat-aol",
+      "title": "Bobcat Arrow of Light",
+      "link": "https://www.scouting.org/cub-scout-adventures/bobcat-aol/",
+      "ranks": [
+        {
+          "id": 16787,
+          "name": "Arrow of Light – 5th Grade",
+          "slug": "arrow-of-light"
+        }
+      ],
+      "requirement_count": 8,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Demonstrate the patrol method by choosing a patrol name and electing a patrol leader. Discuss the benefits of using the patrol method."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Get to know members of your patrol."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Recite the Scout Oath and Scout Law with your patrol."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "With your patrol create a Code of Conduct."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Demonstrate the Scout sign, Scout salute and Scout handshake used by Scouting America. Show how each are used."
+        },
+        {
+          "heading": "Requirement 6",
+          "text": "Learn the Scouting America slogan and motto."
+        },
+        {
+          "heading": "Requirement 7",
+          "text": "With your patrol, or with your parent/legal guardian, visit a Scouting America troop."
+        },
+        {
+          "heading": "Requirement 8",
+          "text": "At home, with your parent or legal guardian do the activities in the booklet “How to Protect Your Children from Child Abuse: A Parent’s Guide.”"
+        }
+      ]
+    },
+    {
+      "id": 203059,
+      "slug": "bobcat-bear",
+      "title": "Bobcat Bear",
+      "link": "https://www.scouting.org/cub-scout-adventures/bobcat-bear/",
+      "ranks": [
+        {
+          "id": 16785,
+          "name": "Bear – 3rd Grade",
+          "slug": "bear"
+        }
+      ],
+      "requirement_count": 8,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Get to know members of your den."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Recite the Scout Oath and Law with your den and den leader."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Learn about the Scout Oath. Identify the three points of the Scout Oath."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "With your den create a den Code of Conduct."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Learn about the denner position and responsibilities."
+        },
+        {
+          "heading": "Requirement 6",
+          "text": "Demonstrate the Cub Scout sign, Cub Scout salute, and Cub Scout handshake. Show how each is used."
+        },
+        {
+          "heading": "Requirement 7",
+          "text": "Share with your den, or family, a time when you demonstrated the Cub Scout motto “Do Your Best.” Explain why it is important to do your best."
+        },
+        {
+          "heading": "Requirement 8",
+          "text": "At home, with your parent or legal guardian do the activities in the booklet “How to Protect Your Children from Child Abuse: A Parent’s Guide.”"
+        }
+      ]
+    },
+    {
+      "id": 204227,
+      "slug": "bobcat-lion",
+      "title": "Bobcat Lion",
+      "link": "https://www.scouting.org/cub-scout-adventures/bobcat-lion/",
+      "ranks": [
+        {
+          "id": 16782,
+          "name": "Lion – Kindergarten",
+          "slug": "lion"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Get to know the members of your den."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Have your Lion adult partner or den leader read the Scout Law to you. Demonstrate your understanding of being friendly."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Share with your Lion adult partner, during a den meeting or at home, a time when you have demonstrated the Cub Scout motto “Do Your Best.”"
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "At home, with your parent or legal guardian, do the activities in the booklet “How to Protect Your Children from Child Abuse: A Parent’s Guide.”"
+        }
+      ]
+    },
+    {
+      "id": 204729,
+      "slug": "bobcat-tiger",
+      "title": "Bobcat Tiger",
+      "link": "https://www.scouting.org/cub-scout-adventures/bobcat-tiger/",
+      "ranks": [
+        {
+          "id": 16783,
+          "name": "Tiger – 1st Grade",
+          "slug": "tiger"
+        }
+      ],
+      "requirement_count": 6,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Get to know the members of your den."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Recite the Scout Oath with your den, including your Tiger adult partner."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Have your Tiger adult partner or den leader read the Scout Law to you. Demonstrate your understanding of being trustworthy, helpful, or friendly."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Demonstrate the Cub Scout sign, Cub Scout salute and Cub Scout handshake. Show how each are used."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Share with your Tiger adult partner, at a den meeting or at home, a time when you have demonstrated the Cub Scout motto “Do Your Best.”"
+        },
+        {
+          "heading": "Requirement 6",
+          "text": "At home, with your parent or legal guardian do the activities in the booklet “ How to Protect Your Children from Child Abuse: A Parent’s Guide .”"
+        }
+      ]
+    },
+    {
+      "id": 204255,
+      "slug": "bobcat-webelos",
+      "title": "Bobcat Webelos",
+      "link": "https://www.scouting.org/cub-scout-adventures/bobcat-webelos/",
+      "ranks": [
+        {
+          "id": 16786,
+          "name": "Webelos – 4th Grade",
+          "slug": "webelos"
+        }
+      ],
+      "requirement_count": 7,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Get to know members of your den."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Recite the Scout Oath and the Scout Law with your den and den leader. Describe the three points of the Scout Oath."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Learn about the Scout Law."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "With your den create a den Code of Conduct."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Learn about the denner position and responsibilities."
+        },
+        {
+          "heading": "Requirement 6",
+          "text": "Demonstrate the Cub Scout sign, Cub Scout salute and Cub Scout handshake. Show how each is used."
+        },
+        {
+          "heading": "Requirement 7",
+          "text": "At home, with your parent or legal guardian do the activities in the booklet “How to Protect Your Children from Child Abuse: A Parent’s Guide.”"
+        }
+      ]
+    },
+    {
+      "id": 197304,
+      "slug": "bobcat-wolf",
+      "title": "Bobcat Wolf",
+      "link": "https://www.scouting.org/cub-scout-adventures/bobcat-wolf/",
+      "ranks": [
+        {
+          "id": 16784,
+          "name": "Wolf – 2nd Grade",
+          "slug": "wolf"
+        }
+      ],
+      "requirement_count": 7,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Get to know members of your den."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Recite the Scout Oath and the Scout Law with your den and den leader."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Learn about the Scout Law."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "With your den create a den Code of Conduct."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Demonstrate the Cub Scout sign, Cub Scout salute and Cub Scout handshake. Show how each is used."
+        },
+        {
+          "heading": "Requirement 6",
+          "text": "Share with your den, or family, a time when you demonstrated the Cub Scout motto “Do Your Best.”"
+        },
+        {
+          "heading": "Requirement 7",
+          "text": "At home, with your parent or legal guardian do the activities in the booklet “How to Protect Your Children from Child Abuse: A Parent’s Guide.”"
+        }
+      ]
+    },
+    {
+      "id": 204649,
+      "slug": "build-it",
+      "title": "Build It",
+      "link": "https://www.scouting.org/cub-scout-adventures/build-it/",
+      "ranks": [
+        {
+          "id": 16786,
+          "name": "Webelos – 4th Grade",
+          "slug": "webelos"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Learn about some basic tools and the proper use of each tool. Learn about and understand the need for safety when you work with tools."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Demonstrate how to check for plumb, level, and square when building."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "With the guidance of your Webelos den leader, parent, or legal guardian, select a carpentry project that requires it to be either plumb, level, and/or square. Create a list of materials and tools you will need to complete the project."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Build your carpentry project."
+        }
+      ]
+    },
+    {
+      "id": 204233,
+      "slug": "build-it-up-knock-it-down",
+      "title": "Build It Up, Knock It Down",
+      "link": "https://www.scouting.org/cub-scout-adventures/build-it-up-knock-it-down/",
+      "ranks": [
+        {
+          "id": 16782,
+          "name": "Lion – Kindergarten",
+          "slug": "lion"
+        }
+      ],
+      "requirement_count": 3,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "With your Lion adult partner, build a structure."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "With your den or family, build a structure."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Build something that is designed to be knocked down."
+        }
+      ]
+    },
+    {
+      "id": 204650,
+      "slug": "catch-the-big-one",
+      "title": "Catch the Big One",
+      "link": "https://www.scouting.org/cub-scout-adventures/catch-the-big-one/",
+      "ranks": [
+        {
+          "id": 16786,
+          "name": "Webelos – 4th Grade",
+          "slug": "webelos"
+        }
+      ],
+      "requirement_count": 7,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Make a plan to go fishing. Determine where you will go and what type of fish you plan to catch. All of the following requirements are to be completed based on your choice."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Use Scouting America SAFE Checklist to plan what you need for your fishing experience."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Describe the environment where the fish might be found."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Make a list of the equipment and materials you will need to fish."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Determine the best type of knot to tie your hook to your line and tie it."
+        },
+        {
+          "heading": "Requirement 6",
+          "text": "Choose the appropriate type of fishing rod and tackle you will be using. Have an adult review your gear."
+        },
+        {
+          "heading": "Requirement 7",
+          "text": "Using what you have learned about fish and fishing equipment, spend at least one hour fishing following local guidelines and regulations."
+        }
+      ]
+    },
+    {
+      "id": 215080,
+      "slug": "champions-for-nature-aol",
+      "title": "Champions for Nature AOL",
+      "link": "https://www.scouting.org/cub-scout-adventures/champions-for-nature-aol/",
+      "ranks": [
+        {
+          "id": 16787,
+          "name": "Arrow of Light – 5th Grade",
+          "slug": "arrow-of-light"
+        }
+      ],
+      "requirement_count": 6,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Identify foods grown or processed in your state."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Determine the benefits of purchasing food that is locally grown or processed."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Explore the concept of a food desert."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Explore the concept of a food oasis."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Learn how individuals can reduce food waste."
+        },
+        {
+          "heading": "Requirement 6",
+          "text": "Participate in a conservation service project."
+        }
+      ]
+    },
+    {
+      "id": 203070,
+      "slug": "champions-for-nature-bear",
+      "title": "Champions for Nature Bear",
+      "link": "https://www.scouting.org/cub-scout-adventures/champions-for-nature-bear/",
+      "ranks": [
+        {
+          "id": 16785,
+          "name": "Bear – 3rd Grade",
+          "slug": "bear"
+        }
+      ],
+      "requirement_count": 5,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Discover natural resources."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Discover what happens to the wastewater in your community."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Investigate soil."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Investigate air pollution."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Participate in a conservation project."
+        }
+      ]
+    },
+    {
+      "id": 204234,
+      "slug": "champions-for-nature-lion",
+      "title": "Champions for Nature Lion",
+      "link": "https://www.scouting.org/cub-scout-adventures/champions-for-nature-lion/",
+      "ranks": [
+        {
+          "id": 16782,
+          "name": "Lion – Kindergarten",
+          "slug": "lion"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Discover the difference between natural resources and man-made items."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Discover the difference between organic, paper, plastic, metal and glass waste."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Discover recycling."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Participate in a conservation service project."
+        }
+      ]
+    },
+    {
+      "id": 204735,
+      "slug": "champions-for-nature-tiger",
+      "title": "Champions for Nature Tiger",
+      "link": "https://www.scouting.org/cub-scout-adventures/champions-for-nature-tiger/",
+      "ranks": [
+        {
+          "id": 16783,
+          "name": "Tiger – 1st Grade",
+          "slug": "tiger"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Discover the difference between renewable natural resources and non-renewable natural resources."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Learn about the 3 R’s: Reduce, Reuse, Recycle."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Discover what happens to the garbage in your community"
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Participate in a conservation project."
+        }
+      ]
+    },
+    {
+      "id": 204651,
+      "slug": "champions-for-nature-webelos",
+      "title": "Champions for Nature Webelos",
+      "link": "https://www.scouting.org/cub-scout-adventures/champions-for-nature-webelos/",
+      "ranks": [
+        {
+          "id": 16786,
+          "name": "Webelos – 4th Grade",
+          "slug": "webelos"
+        }
+      ],
+      "requirement_count": 6,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Discover the four components that make up a habitat: food, water, shelter, space."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Pick an animal that is currently threatened or endangered to complete requirements 3, 4, and 5."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Identify the characteristics that classify an animal as a threatened or endangered species."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Explore what caused this animal to be threatened or endangered."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Research what is currently being done to protect the animal."
+        },
+        {
+          "heading": "Requirement 6",
+          "text": "Participate in a conservation service project."
+        }
+      ]
+    },
+    {
+      "id": 198702,
+      "slug": "champions-for-nature-wolf",
+      "title": "Champions for Nature Wolf",
+      "link": "https://www.scouting.org/cub-scout-adventures/champions-for-nature-wolf/",
+      "ranks": [
+        {
+          "id": 16784,
+          "name": "Wolf – 2nd Grade",
+          "slug": "wolf"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Discover the difference between renewable natural resources and non-renewable natural resources."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Learn about the 3 R’s: Reduce, Reuse, Recycle."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Discover what happens to the recyclables in your community."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Participate in a conservation project."
+        }
+      ]
+    },
+    {
+      "id": 203071,
+      "slug": "chef-tech",
+      "title": "Chef Tech",
+      "link": "https://www.scouting.org/cub-scout-adventures/chef-tech/",
+      "ranks": [
+        {
+          "id": 16785,
+          "name": "Bear – 3rd Grade",
+          "slug": "bear"
+        }
+      ],
+      "requirement_count": 5,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Pick a kitchen appliance that uses technology to complete the following requirements."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "With an adult, review the safety guidelines in the owner’s manual and follow all safety guidelines."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "With adult supervision, download a cooking app or search online to find a recipe."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "With adult supervision, follow the selected recipe and make the recipe."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Think of a way technology can improve the appliance used to make your recipe."
+        }
+      ]
+    },
+    {
+      "id": 204652,
+      "slug": "chefs-knife",
+      "title": "Chef’s Knife",
+      "link": "https://www.scouting.org/cub-scout-adventures/chefs-knife/",
+      "ranks": [
+        {
+          "id": 16786,
+          "name": "Webelos – 4th Grade",
+          "slug": "webelos"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Read, understand, and promise to follow the “Cub Scout Knife Safety Rules.”"
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Demonstrate the knife safety circle."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Demonstrate that you know how to care for and use a kitchen knife safely."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Choose the correct cooking knife and demonstrate how to properly slice, dice, and mince."
+        }
+      ]
+    },
+    {
+      "id": 204680,
+      "slug": "citizenship",
+      "title": "Citizenship",
+      "link": "https://www.scouting.org/cub-scout-adventures/citizenship/",
+      "ranks": [
+        {
+          "id": 16787,
+          "name": "Arrow of Light – 5th Grade",
+          "slug": "arrow-of-light"
+        }
+      ],
+      "requirement_count": 2,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Identify a community service project that your patrol or pack could accomplish. Use Scouting America’s SAFE Checklist and develop a plan to conduct the service project safely."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Participate in a service project for a minimum of two hours or multiple service projects for a total of two hours."
+        }
+      ]
+    },
+    {
+      "id": 198703,
+      "slug": "code-of-the-wolf",
+      "title": "Code of the Wolf",
+      "link": "https://www.scouting.org/cub-scout-adventures/code-of-the-wolf/",
+      "ranks": [
+        {
+          "id": 16784,
+          "name": "Wolf – 2nd Grade",
+          "slug": "wolf"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Create a secret code. Send a message to a member of your den or family. Have that person send a message back to you using the same secret code."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Build and play a game that requires the use of codes or patterns."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Select a single shape. Observe the environment around you. Write down where you see that shape and how it is being used."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Using a package that contains a number of different colored items, discover the most common color."
+        }
+      ]
+    },
+    {
+      "id": 198704,
+      "slug": "computing-wolves",
+      "title": "Computing Wolves",
+      "link": "https://www.scouting.org/cub-scout-adventures/computing-wolves/",
+      "ranks": [
+        {
+          "id": 16784,
+          "name": "Wolf – 2nd Grade",
+          "slug": "wolf"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Discover the basic components of a computer."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Determine how to properly dispose of computer components."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Using a digital device application of your choice, create a story that you can share with others."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "With your parent or legal guardian, set up a policy for safely using digital devices."
+        }
+      ]
+    },
+    {
+      "id": 197354,
+      "slug": "council-fire",
+      "title": "Council Fire",
+      "link": "https://www.scouting.org/cub-scout-adventures/council-fire/",
+      "ranks": [
+        {
+          "id": 16784,
+          "name": "Wolf – 2nd Grade",
+          "slug": "wolf"
+        }
+      ],
+      "requirement_count": 6,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Learn how to properly care for and fold the United States flag. With your den or pack, participate in a flag ceremony."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Identify three points of the Scout Law that are important to being a good neighbor."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Build a model of your home."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Using the same materials from requirement 3, create a model of a building in your community."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Using the models built in requirements 3 and 4, create a neighborhood."
+        },
+        {
+          "heading": "Requirement 6",
+          "text": "Participate in a service project. Explain how your volunteering is helpful to your neighborhood."
+        }
+      ]
+    },
+    {
+      "id": 204235,
+      "slug": "count-on-me",
+      "title": "Count On Me",
+      "link": "https://www.scouting.org/cub-scout-adventures/count-on-me/",
+      "ranks": [
+        {
+          "id": 16782,
+          "name": "Lion – Kindergarten",
+          "slug": "lion"
+        }
+      ],
+      "requirement_count": 3,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Make a Lion using only squares, triangles, and circles."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Play a game with your Lion adult partner or den that is based on counting or numbers."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Organize a group of items based on shape, then based on color, and one other category. Count how many different shapes are in each category. After organizing them build anything using only one category."
+        }
+      ]
+    },
+    {
+      "id": 203072,
+      "slug": "critter-care",
+      "title": "Critter Care",
+      "link": "https://www.scouting.org/cub-scout-adventures/critter-care/",
+      "ranks": [
+        {
+          "id": 16785,
+          "name": "Bear – 3rd Grade",
+          "slug": "bear"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Identify an animal that would be good pet for your family."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Choose two animals that are allowed as pets in your community. Compare and contrast why these pets may be a good choice for you."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Based on your choice in requirement 1, investigate how to properly care for your chosen animal."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Discover three ways a pet can help people."
+        }
+      ]
+    },
+    {
+      "id": 198705,
+      "slug": "cubs-who-care",
+      "title": "Cubs Who Care",
+      "link": "https://www.scouting.org/cub-scout-adventures/cubs-who-care/",
+      "ranks": [
+        {
+          "id": 16784,
+          "name": "Wolf – 2nd Grade",
+          "slug": "wolf"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Explore what it is to have a physical disability."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Explore what it is to have a visual impairment."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Explore what it is to have a hearing loss."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Explore barriers to getting around."
+        }
+      ]
+    },
+    {
+      "id": 204736,
+      "slug": "curiosity-intrigue-and-magical-mysteries",
+      "title": "Curiosity, Intrigue, and Magical Mysteries",
+      "link": "https://www.scouting.org/cub-scout-adventures/curiosity-intrigue-and-magical-mysteries/",
+      "ranks": [
+        {
+          "id": 16783,
+          "name": "Tiger – 1st Grade",
+          "slug": "tiger"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Learn a magic trick. Practice the trick. Share the trick with you den or family members."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Demonstrate how a magic trick works to your den, family or Tiger adult partner."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Write your name in secret code."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Write a message with the code. Challenge your den, family or Tiger adult partner to read your coded message."
+        }
+      ]
+    },
+    {
+      "id": 215129,
+      "slug": "cycling",
+      "title": "Cycling",
+      "link": "https://www.scouting.org/cub-scout-adventures/cycling/",
+      "ranks": [
+        {
+          "id": 16787,
+          "name": "Arrow of Light – 5th Grade",
+          "slug": "arrow-of-light"
+        }
+      ],
+      "requirement_count": 7,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Decide on gear and supplies you should bring might bring for a long bike ride. Determine how to safely carry the gear."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Discover how multi-gear bicycles work and their benefit."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Show how to lubricate a chain."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Review different bicycle locks. Demonstrate the operation of locks and, how to secure your bicycle with a lock."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Repair a flat tire."
+        },
+        {
+          "heading": "Requirement 6",
+          "text": "With your patrol, pack, or family, use a map and plan a bicycle ride that is at least 10 miles."
+        },
+        {
+          "heading": "Requirement 7",
+          "text": "With your patrol, pack, or family and using the buddy system, go on a bicycle ride that is a minimum of 10 miles."
+        }
+      ]
+    },
+    {
+      "id": 204737,
+      "slug": "designed-by-tiger",
+      "title": "Designed by Tiger",
+      "link": "https://www.scouting.org/cub-scout-adventures/designed-by-tiger/",
+      "ranks": [
+        {
+          "id": 16783,
+          "name": "Tiger – 1st Grade",
+          "slug": "tiger"
+        }
+      ],
+      "requirement_count": 5,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Think about something that you would like to build. Draw a picture of what the final project should look like."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Using your drawing as a guide, build the project."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "When completed, discuss with your Tiger adult partner what could be done to improve your project."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Make the improvement to your project."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Make a drawing of your final project."
+        }
+      ]
+    },
+    {
+      "id": 198711,
+      "slug": "digging-in-the-past",
+      "title": "Digging in the Past",
+      "link": "https://www.scouting.org/cub-scout-adventures/digging-in-the-past/",
+      "ranks": [
+        {
+          "id": 16784,
+          "name": "Wolf – 2nd Grade",
+          "slug": "wolf"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Play a dinosaur game that shows what you know about them."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Create an imaginary dinosaur. Share with your den or family its name, what it eats, its size, and where it lives."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Be a paleontologist and dig through a dinosaur dig."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Build a fossil layer."
+        }
+      ]
+    },
+    {
+      "id": 204684,
+      "slug": "duty-to-god",
+      "title": "Duty to God",
+      "link": "https://www.scouting.org/cub-scout-adventures/duty-to-god/",
+      "ranks": [
+        {
+          "id": 16787,
+          "name": "Arrow of Light – 5th Grade",
+          "slug": "arrow-of-light"
+        }
+      ],
+      "requirement_count": 3,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Discuss with your parent or legal guardian your family’s faith traditions or one of your choosing. Choose a view or value of that faith tradition that is related to the Scout Law. Discuss with your family how each family member demonstrates this value."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Meet with a representative of a faith-based organization in your local community who provides a service that assists people in crisis regardless of their faith. Identify who they help and how."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Discuss with your parent, legal guardian, or an adult leader what “Duty to God” means to you. Tell how you practice your Duty to God in your daily life."
+        }
+      ]
+    },
+    {
+      "id": 204653,
+      "slug": "earth-rocks",
+      "title": "Earth Rocks",
+      "link": "https://www.scouting.org/cub-scout-adventures/earth-rocks/",
+      "ranks": [
+        {
+          "id": 16786,
+          "name": "Webelos – 4th Grade",
+          "slug": "webelos"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Examine the three types of rocks, sedimentary, igneous, and metamorphic."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Find a rock, safely break it apart and examine it."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Make a mineral test kit and test minerals according to the Mohs scale of mineral hardness. Using the rock cycle chart or one like it, discuss how hardness determines which materials can be used in homes, in landscapes, or for recreation."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Grow a crystal."
+        }
+      ]
+    },
+    {
+      "id": 215140,
+      "slug": "engineer",
+      "title": "Engineer",
+      "link": "https://www.scouting.org/cub-scout-adventures/engineer/",
+      "ranks": [
+        {
+          "id": 16787,
+          "name": "Arrow of Light – 5th Grade",
+          "slug": "arrow-of-light"
+        }
+      ],
+      "requirement_count": 5,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Learn the focus, related sciences, and products of civil, electrical, and mechanical engineers."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Pick one of the engineering fields from requirement 1 to complete the following requirements."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Examine a set of blueprints or specifications used by your choice of engineer."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Identify a project that you would like to build."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Using the engineering process, build your project."
+        }
+      ]
+    },
+    {
+      "id": 215151,
+      "slug": "estimations",
+      "title": "Estimations",
+      "link": "https://www.scouting.org/cub-scout-adventures/estimations/",
+      "ranks": [
+        {
+          "id": 16787,
+          "name": "Arrow of Light – 5th Grade",
+          "slug": "arrow-of-light"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Estimate food measurements."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Estimate the time of day."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Estimate the height of a distant object."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Estimate the distance between two points."
+        }
+      ]
+    },
+    {
+      "id": 204236,
+      "slug": "everyday-tech",
+      "title": "Everyday Tech",
+      "link": "https://www.scouting.org/cub-scout-adventures/everyday-tech/",
+      "ranks": [
+        {
+          "id": 16782,
+          "name": "Lion – Kindergarten",
+          "slug": "lion"
+        }
+      ],
+      "requirement_count": 3,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Discover technology around your home, meeting place, or neighborhood."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Discover ways that digital technology can make life easier."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Identify an item of digital technology you use at home. Demonstrate to your Lion adult partner how you use it safely."
+        }
+      ]
+    },
+    {
+      "id": 203064,
+      "slug": "fellowship",
+      "title": "Fellowship",
+      "link": "https://www.scouting.org/cub-scout-adventures/fellowship/",
+      "ranks": [
+        {
+          "id": 16785,
+          "name": "Bear – 3rd Grade",
+          "slug": "bear"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "With your parent or legal guardian talk about your family’s faith traditions. Identify three holidays or celebrations that are part of your family’s faith traditions. Make a craft, work of art, or a food item that is part of your favorite family’s faith tradition, holiday or celebration."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "With your family, attend a religious service OR other gathering that shows how your family expresses reverence."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Carry out an act of kindness."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "With your parent or legal guardian identify a religion or faith that is different from your own. Determine two things that it has in common with your family’s beliefs."
+        }
+      ]
+    },
+    {
+      "id": 198712,
+      "slug": "finding-your-way",
+      "title": "Finding Your Way",
+      "link": "https://www.scouting.org/cub-scout-adventures/finding-your-way/",
+      "ranks": [
+        {
+          "id": 16784,
+          "name": "Wolf – 2nd Grade",
+          "slug": "wolf"
+        }
+      ],
+      "requirement_count": 5,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Using a map, locate where you live."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Draw a map for a friend to locate your home or school. Create a key for the map."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Find the directions north, east, south, and west and the compass rose on a map."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Find the directions north, east, south, and west using a compass."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Practice using both a map and a compass."
+        }
+      ]
+    },
+    {
+      "id": 204682,
+      "slug": "first-aid",
+      "title": "First Aid",
+      "link": "https://www.scouting.org/cub-scout-adventures/first-aid/",
+      "ranks": [
+        {
+          "id": 16787,
+          "name": "Arrow of Light – 5th Grade",
+          "slug": "arrow-of-light"
+        }
+      ],
+      "requirement_count": 7,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "With permission from your parent or legal guardian, watch the Protect Yourself Rules video for the Arrow of Light rank."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Explain what you should do if you encounter someone in need of first aid."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Demonstrate what to do for hurry cases of first aid: serious bleeding, heart attack or sudden cardiac arrest, stopped breathing, stroke, poisoning."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Demonstrate how to help a choking victim."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Demonstrate how to treat shock."
+        },
+        {
+          "heading": "Requirement 6",
+          "text": "Demonstrate how to treat the following: cuts and scratches, burns and scalds, bites and stings of insects and animals, and nosebleed."
+        },
+        {
+          "heading": "Requirement 7",
+          "text": "Make a personal first-aid kit. Demonstrate the proper use of each item in your first-aid kit."
+        }
+      ]
+    },
+    {
+      "id": 204738,
+      "slug": "fish-on",
+      "title": "Fish On",
+      "link": "https://www.scouting.org/cub-scout-adventures/fish-on/",
+      "ranks": [
+        {
+          "id": 16783,
+          "name": "Tiger – 1st Grade",
+          "slug": "tiger"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "With your den or Tiger adult partner, identify the body of water where you will go fishing."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "With your Tiger adult partner, learn the rules of fishing safely."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Draw a picture of the type of fish you think lives in the water where you are going fishing."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Go fishing with your Tiger adult partner."
+        }
+      ]
+    },
+    {
+      "id": 215160,
+      "slug": "fishing",
+      "title": "Fishing",
+      "link": "https://www.scouting.org/cub-scout-adventures/fishing/",
+      "ranks": [
+        {
+          "id": 16787,
+          "name": "Arrow of Light – 5th Grade",
+          "slug": "arrow-of-light"
+        }
+      ],
+      "requirement_count": 7,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Make a plan to go fishing. Determine where you will go and what type of fish you plan to catch. All of the following requirements are to be completed based on your choice."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Use Scouting America’s SAFE Checklist to plan what you need for your fishing experience."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Describe the environment where the fish might be found."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Make a list of the equipment and materials you will need to fish."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Determine the best type of knot to tie your hook to your line and tie it."
+        },
+        {
+          "heading": "Requirement 6",
+          "text": "On your own, choose the appropriate type of fishing rod and tackle you will be using. Have an adult review your gear."
+        },
+        {
+          "heading": "Requirement 7",
+          "text": "Using what you have learned about fish and fishing equipment, spend at least one hour fishing following local guidelines and regulations."
+        }
+      ]
+    },
+    {
+      "id": 204739,
+      "slug": "floats-and-boats",
+      "title": "Floats and Boats",
+      "link": "https://www.scouting.org/cub-scout-adventures/floats-and-boats/",
+      "ranks": [
+        {
+          "id": 16783,
+          "name": "Tiger – 1st Grade",
+          "slug": "tiger"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Identify five different types of boats."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Identify five things that float and five things that do not float."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Build or create a model boat and float it on the water. This can be made from recycled materials or other items."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Show that you can put on and fasten a life jacket correctly and learn when it is safe to enter a boat."
+        }
+      ]
+    },
+    {
+      "id": 197380,
+      "slug": "footsteps",
+      "title": "Footsteps",
+      "link": "https://www.scouting.org/cub-scout-adventures/footsteps/",
+      "ranks": [
+        {
+          "id": 16784,
+          "name": "Wolf – 2nd Grade",
+          "slug": "wolf"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "With your parent or legal guardian talk about your family’s faith traditions. Identify three holidays or celebrations that are part of your family’s faith traditions. Make a craft or work of art of your favorite family’s faith tradition holiday or celebration."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "With your family, attend a religious service OR other gathering that shows how your family expresses reverence."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Carry out an act of kindness."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Listen to or read Aesop’s fable “The Boy Who Cried Wolf.” With your den or family discuss why being truthful is important."
+        }
+      ]
+    },
+    {
+      "id": 203073,
+      "slug": "forensics",
+      "title": "Forensics",
+      "link": "https://www.scouting.org/cub-scout-adventures/forensics/",
+      "ranks": [
+        {
+          "id": 16785,
+          "name": "Bear – 3rd Grade",
+          "slug": "bear"
+        }
+      ],
+      "requirement_count": 6,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Explore the term “forensics” and how it is used to help solve crimes."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Analyze your fingerprints."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Make a shoe imprint."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Do an analysis of four different substances: salt, sugar, baking soda and cornstarch."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Learn about chromatography and how it is used in solving crimes."
+        },
+        {
+          "heading": "Requirement 6",
+          "text": "Find out how officers collect evidence."
+        }
+      ]
+    },
+    {
+      "id": 204229,
+      "slug": "fun-on-the-run",
+      "title": "Fun on the Run",
+      "link": "https://www.scouting.org/cub-scout-adventures/fun-on-the-run/",
+      "ranks": [
+        {
+          "id": 16782,
+          "name": "Lion – Kindergarten",
+          "slug": "lion"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Identify the five different food groups."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Practice hand washing. Point out when you should wash your hands."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Be active for 20 minutes."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Practice methods that help you rest."
+        }
+      ]
+    },
+    {
+      "id": 198713,
+      "slug": "germs-alive",
+      "title": "Germs Alive!",
+      "link": "https://www.scouting.org/cub-scout-adventures/germs-alive/",
+      "ranks": [
+        {
+          "id": 16784,
+          "name": "Wolf – 2nd Grade",
+          "slug": "wolf"
+        }
+      ],
+      "requirement_count": 5,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Wash your hands with soap and water while singing the “Happy Birthday” song two times."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Play Germ Magnet with our den or your family. Wash your hands afterward."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Conduct the sneeze demonstration."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Conduct the mucus demonstration."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Grow a mold culture. Show what formed at a den or pack meeting."
+        }
+      ]
+    },
+    {
+      "id": 204237,
+      "slug": "gizmos-and-gadgets",
+      "title": "Gizmos and Gadgets",
+      "link": "https://www.scouting.org/cub-scout-adventures/gizmos-and-gadgets/",
+      "ranks": [
+        {
+          "id": 16782,
+          "name": "Lion – Kindergarten",
+          "slug": "lion"
+        }
+      ],
+      "requirement_count": 3,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Explore properties of motion."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Explore properties of force."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Use household materials to create a useful object."
+        }
+      ]
+    },
+    {
+      "id": 204238,
+      "slug": "go-fish",
+      "title": "Go Fish",
+      "link": "https://www.scouting.org/cub-scout-adventures/go-fish/",
+      "ranks": [
+        {
+          "id": 16782,
+          "name": "Lion – Kindergarten",
+          "slug": "lion"
+        }
+      ],
+      "requirement_count": 3,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "With your Lion adult partner, learn the rules of fishing safely."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Draw a picture of the type of fish you think lives in the water where you are going fishing."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Go fishing with your Lion adult partner."
+        }
+      ]
+    },
+    {
+      "id": 204740,
+      "slug": "good-knights",
+      "title": "Good Knights",
+      "link": "https://www.scouting.org/cub-scout-adventures/good-knights/",
+      "ranks": [
+        {
+          "id": 16783,
+          "name": "Tiger – 1st Grade",
+          "slug": "tiger"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Discuss with your den or Tiger adult partner what it means to have courteous behavior, how a knight behaves. Tell another Tiger which points of the Scout Law help you to have the same Knightly behavior."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Create a shield that can be for your den or a personal shield."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Using recycled and other materials, design and build a small castle in your den or at home."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Do a Good Turn."
+        }
+      ]
+    },
+    {
+      "id": 215171,
+      "slug": "high-tech-outdoors",
+      "title": "High Tech Outdoors",
+      "link": "https://www.scouting.org/cub-scout-adventures/high-tech-outdoors/",
+      "ranks": [
+        {
+          "id": 16787,
+          "name": "Arrow of Light – 5th Grade",
+          "slug": "arrow-of-light"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "With an adult, use a weather app or website to see the forecast for an outdoor activity and discuss any preparation needed to accommodate the weather."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "With an adult, find a knot-tying app. Select one knot to learn, and tie it using the app."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Discuss how technology has improved camping gear."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Think of a way technology can improve camping gear used on one of your outdoor activities."
+        }
+      ]
+    },
+    {
+      "id": 204239,
+      "slug": "ill-do-it-myself",
+      "title": "I’ll Do It Myself",
+      "link": "https://www.scouting.org/cub-scout-adventures/ill-do-it-myself/",
+      "ranks": [
+        {
+          "id": 16782,
+          "name": "Lion – Kindergarten",
+          "slug": "lion"
+        }
+      ],
+      "requirement_count": 3,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Make and use a “lion bag” for personal Scouting gear."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Construct a personal care checklist."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Put on your shoes without help. Take them off and put them away."
+        }
+      ]
+    },
+    {
+      "id": 215180,
+      "slug": "into-the-wild",
+      "title": "Into the Wild",
+      "link": "https://www.scouting.org/cub-scout-adventures/into-the-wild/",
+      "ranks": [
+        {
+          "id": 16787,
+          "name": "Arrow of Light – 5th Grade",
+          "slug": "arrow-of-light"
+        }
+      ],
+      "requirement_count": 5,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Visit a place with a variety of wild animals. Select one of the animals and observe its behavior. Use your selected animal to complete the remaining requirements."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Create a model of your animal’s ecosystem."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Investigate how your animal coexists with other animals in the wild."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Describe how humans interact with your chosen animal’s ecosystem."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Discover how wildlife management benefits your animal."
+        }
+      ]
+    },
+    {
+      "id": 215194,
+      "slug": "into-the-woods",
+      "title": "Into the Woods",
+      "link": "https://www.scouting.org/cub-scout-adventures/into-the-woods/",
+      "ranks": [
+        {
+          "id": 16787,
+          "name": "Arrow of Light – 5th Grade",
+          "slug": "arrow-of-light"
+        }
+      ],
+      "requirement_count": 5,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Visit an area with trees and plants and conduct a tree inventory. Select one tree and complete the remaining requirements based on that tree."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Determine if your tree is deciduous or evergreen."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Determine if your tree is native or was introduced to your area."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Find out how your tree deals with wildfire."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Learn how wildlife uses your tree."
+        }
+      ]
+    },
+    {
+      "id": 204230,
+      "slug": "king-of-the-jungle",
+      "title": "King of the Jungle",
+      "link": "https://www.scouting.org/cub-scout-adventures/king-of-the-jungle/",
+      "ranks": [
+        {
+          "id": 16782,
+          "name": "Lion – Kindergarten",
+          "slug": "lion"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Draw a picture or take a photo of the people you live with."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "With your Lion adult partner, choose a job that will help your family. Follow through by doing that job at least once."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Talk with a grandparent or other older adult about what citizenship means to them."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Participate in a service project."
+        }
+      ]
+    },
+    {
+      "id": 215205,
+      "slug": "knife-safety",
+      "title": "Knife Safety",
+      "link": "https://www.scouting.org/cub-scout-adventures/knife-safety/",
+      "ranks": [
+        {
+          "id": 16787,
+          "name": "Arrow of Light – 5th Grade",
+          "slug": "arrow-of-light"
+        }
+      ],
+      "requirement_count": 5,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Know the safety rules for handling and using a knife."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Demonstrate the knife safety circle."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Demonstrate that you know how to care for and use a knife safely."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Demonstrate the proper use of a pocketknife to make a useful object on a campout."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Choose the correct cooking knife and demonstrate how to properly slice, chop, and mince."
+        }
+      ]
+    },
+    {
+      "id": 203074,
+      "slug": "lets-camp-bear",
+      "title": "Let’s Camp Bear",
+      "link": "https://www.scouting.org/cub-scout-adventures/lets-camp-bear/",
+      "ranks": [
+        {
+          "id": 16785,
+          "name": "Bear – 3rd Grade",
+          "slug": "bear"
+        }
+      ],
+      "requirement_count": 5,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Review the buddy system and how it works in the outdoors."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Pack your Cub Scout Six Essentials for the campout."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "In addition to your Cub Scout Six Essentials, show the personal items you need for your campout."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Help set up a tent. Determine a good spot for the tent. Explain why you picked the spot."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Attend a council or district Cub Scout overnight camp or attend a campout with your pack."
+        }
+      ]
+    },
+    {
+      "id": 204240,
+      "slug": "lets-camp-lion",
+      "title": "Let’s Camp Lion",
+      "link": "https://www.scouting.org/cub-scout-adventures/lets-camp-lion/",
+      "ranks": [
+        {
+          "id": 16782,
+          "name": "Lion – Kindergarten",
+          "slug": "lion"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Learn about the buddy system and how it works in the outdoors."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Before going on the overnight campout, discuss what type of weather is expected and what type of clothes you should wear."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Pack up your Cub Scout Six Essentials for the campout."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Attend a council or district Cub Scout overnight camp or attend an overnight campout with your pack."
+        }
+      ]
+    },
+    {
+      "id": 204741,
+      "slug": "lets-camp-tiger",
+      "title": "Let’s Camp Tiger",
+      "link": "https://www.scouting.org/cub-scout-adventures/lets-camp-tiger/",
+      "ranks": [
+        {
+          "id": 16783,
+          "name": "Tiger – 1st Grade",
+          "slug": "tiger"
+        }
+      ],
+      "requirement_count": 5,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Learn about the buddy system and how it works in the outdoors."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Before going on the overnight campout, discuss what type of weather is expected and what type of clothes you should wear."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Pack up your Cub Scout Six Essentials for the campout."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Learn a camping skill."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Attend a council or district Cub Scout overnight camp or attend a campout with your pack."
+        }
+      ]
+    },
+    {
+      "id": 204662,
+      "slug": "lets-camp-webelos",
+      "title": "Let’s Camp Webelos",
+      "link": "https://www.scouting.org/cub-scout-adventures/lets-camp-webelos/",
+      "ranks": [
+        {
+          "id": 16786,
+          "name": "Webelos – 4th Grade",
+          "slug": "webelos"
+        }
+      ],
+      "requirement_count": 9,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "With your den, pack, or family, plan and participate in a campout."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Upon arrival at the campground, determine where to set up a tent."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Set up your tent without help from an adult."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Identify a potential weather hazard that could occur in your area. Determine the action you will take if you experience the weather hazard during the campout."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Show how to tie a bowline. Explain when this knot should be used and why."
+        },
+        {
+          "heading": "Requirement 6",
+          "text": "Know the fire safety rules. Using those rules, locate a safe area to build a campfire."
+        },
+        {
+          "heading": "Requirement 7",
+          "text": "Using tinder, kindling, and fuel wood, properly build a teepee fire lay. If circumstances permit, and there is no local restriction on fires, show how to safely light the fire while under adult supervision. After allowing the fire to burn safely, extinguish the flames with minimal impact to the fire site."
+        },
+        {
+          "heading": "Requirement 8",
+          "text": "Recite the Outdoor Code and Leave No Trace Principles for Kids from Memory."
+        },
+        {
+          "heading": "Requirement 9",
+          "text": "After your campout, share the things you did to follow the Outdoor Code and Leave No Trace Principles for Kids with your den or family."
+        }
+      ]
+    },
+    {
+      "id": 198715,
+      "slug": "lets-camp-wolf",
+      "title": "Let’s Camp Wolf",
+      "link": "https://www.scouting.org/cub-scout-adventures/lets-camp-wolf/",
+      "ranks": [
+        {
+          "id": 16784,
+          "name": "Wolf – 2nd Grade",
+          "slug": "wolf"
+        }
+      ],
+      "requirement_count": 5,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Learn about the buddy system and how it works in the outdoors."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Know the Cub Scout Six Essentials."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "In addition to your Cub Scout Six Essentials, list the personal items you need for your campout."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Learn a camping skill."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Attend a council or district Cub Scout overnight camp or attend a campout with your pack."
+        }
+      ]
+    },
+    {
+      "id": 204232,
+      "slug": "lions-pride",
+      "title": "Lion’s Pride",
+      "link": "https://www.scouting.org/cub-scout-adventures/lions-pride/",
+      "ranks": [
+        {
+          "id": 16782,
+          "name": "Lion – Kindergarten",
+          "slug": "lion"
+        }
+      ],
+      "requirement_count": 3,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "With your parent or legal guardian talk about your family’s faith traditions. Draw a picture of your favorite family’s faith tradition holiday or celebration."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "With your family, attend a religious service OR other gathering that shows how your family expresses Family & Reverence."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Make a cheerful card or a drawing for someone you love and give it to them."
+        }
+      ]
+    },
+    {
+      "id": 204231,
+      "slug": "lions-roar",
+      "title": "Lion’s Roar",
+      "link": "https://www.scouting.org/cub-scout-adventures/lions-roar/",
+      "ranks": [
+        {
+          "id": 16782,
+          "name": "Lion – Kindergarten",
+          "slug": "lion"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "With permission from your parent or legal guardian watch the Protect Yourself Rules video for the Lion rank."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "With your Lion adult partner, demonstrate Shout, Run, Tell as explained in the Protect Yourself Rules video."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "With your Lion adult partner, demonstrate how to access emergency services."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "With your Lion adult partner, demonstrate how to safely cross a street or walk in a parking lot."
+        }
+      ]
+    },
+    {
+      "id": 203075,
+      "slug": "marble-madness",
+      "title": "Marble Madness",
+      "link": "https://www.scouting.org/cub-scout-adventures/marble-madness/",
+      "ranks": [
+        {
+          "id": 16785,
+          "name": "Bear – 3rd Grade",
+          "slug": "bear"
+        }
+      ],
+      "requirement_count": 5,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Make a marble bag."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Learn five words that are used when talking about marbles."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Play three different marble games."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Build a marble racetrack with at least two lanes."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Build a marble maze."
+        }
+      ]
+    },
+    {
+      "id": 204665,
+      "slug": "math-on-the-trail",
+      "title": "Math on the Trail",
+      "link": "https://www.scouting.org/cub-scout-adventures/math-on-the-trail/",
+      "ranks": [
+        {
+          "id": 16786,
+          "name": "Webelos – 4th Grade",
+          "slug": "webelos"
+        }
+      ],
+      "requirement_count": 3,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Determine your walking pace by walking ¼ mile. Make a projection on how long it would take you to walk 2 miles."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Walk 2 miles and record the time it took you to complete the two miles."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Make a projection on how long it would take you to hike a 20-mile trail over two days. List all the factors to consider for your projection."
+        }
+      ]
+    },
+    {
+      "id": 204667,
+      "slug": "modular-design",
+      "title": "Modular Design",
+      "link": "https://www.scouting.org/cub-scout-adventures/modular-design/",
+      "ranks": [
+        {
+          "id": 16786,
+          "name": "Webelos – 4th Grade",
+          "slug": "webelos"
+        }
+      ],
+      "requirement_count": 6,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Learn what modular design is and identify three things that use modular design in their construction."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Using modular-based building pieces, build a model without a set of instructions."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Using the model made in requirement 2, create a set of step-by-step instructions on how to make your model."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Have someone make your model using your instructions."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Using the same modular pieces used in requirement 2, build another model of something different."
+        },
+        {
+          "heading": "Requirement 6",
+          "text": "With your parent or legal guardian’s permission, watch a video demonstrating how something was built using modular design."
+        }
+      ]
+    },
+    {
+      "id": 204228,
+      "slug": "mountain-lion",
+      "title": "Mountain Lion",
+      "link": "https://www.scouting.org/cub-scout-adventures/mountain-lion/",
+      "ranks": [
+        {
+          "id": 16782,
+          "name": "Lion – Kindergarten",
+          "slug": "lion"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Identify the Cub Scout Six Essentials. Show what you do with each item."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "With your den, pack, or family, take a walk outside spending for at least 20 minutes exploring the outdoors with your Cub Scout Six Essentials. While outside, identify things that you see with your Lion adult partner that are natural and things that are manmade."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Discover what S.A.W. means."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Identify common animals that are found where you live. Separate those animals into domesticated and wild."
+        }
+      ]
+    },
+    {
+      "id": 204643,
+      "slug": "my-community",
+      "title": "My Community",
+      "link": "https://www.scouting.org/cub-scout-adventures/my-community/",
+      "ranks": [
+        {
+          "id": 16786,
+          "name": "Webelos – 4th Grade",
+          "slug": "webelos"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Learn about majority and plurality types of voting."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Speak with someone who is elected to their position. Discover the type of voting that was used for to elect them and why."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Choose a federal law and create a timeline of the history of the law. Include the involvement of the 3 branches of government."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Participate in a service project."
+        }
+      ]
+    },
+    {
+      "id": 204645,
+      "slug": "my-family",
+      "title": "My Family",
+      "link": "https://www.scouting.org/cub-scout-adventures/my-family/",
+      "ranks": [
+        {
+          "id": 16786,
+          "name": "Webelos – 4th Grade",
+          "slug": "webelos"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "With your parent or legal guardian, talk about your family’s faith traditions. Identify three holidays or celebrations that are part of your family’s faith traditions. Make a craft, work of art, or a food item that is part of your family’s faith traditions."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Carry out an act of kindness."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "With your parent or legal guardian identify a religion or faith that is different from your own. Identify two things that it has in common with your family’s beliefs."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Discuss with our parent or legal guardian what it means to be reverent. Tell how you practice being reverent in your daily life."
+        }
+      ]
+    },
+    {
+      "id": 204644,
+      "slug": "my-safety",
+      "title": "My Safety",
+      "link": "https://www.scouting.org/cub-scout-adventures/my-safety/",
+      "ranks": [
+        {
+          "id": 16786,
+          "name": "Webelos – 4th Grade",
+          "slug": "webelos"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "With permission from your parent or legal guardian, watch the Protect Yourself Rules video for the Webelos rank."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Identify items in your house that are hazardous and make sure they are stored properly. Identify on the package where it describes what to do if someone is accidentally exposed to them."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Identify ways you and your family keep your home or your meeting space safe."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Complete the Be Prepared for Natural Events worksheet. Complete a worksheet for at least two natural events most likely to happen near where you live."
+        }
+      ]
+    },
+    {
+      "id": 204241,
+      "slug": "on-a-roll",
+      "title": "On a Roll",
+      "link": "https://www.scouting.org/cub-scout-adventures/on-a-roll/",
+      "ranks": [
+        {
+          "id": 16782,
+          "name": "Lion – Kindergarten",
+          "slug": "lion"
+        }
+      ],
+      "requirement_count": 3,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "With your den or Lion adult partner, learn about the safety gear you should use while riding a bicycle."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "With your den or Lion adult partner, learn the safety rules to follow when riding a bicycle."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "With your Lion adult partner or family, ride a bicycle wearing appropriate safety gear and follow safety rules."
+        }
+      ]
+    },
+    {
+      "id": 204242,
+      "slug": "on-your-mark",
+      "title": "On Your Mark",
+      "link": "https://www.scouting.org/cub-scout-adventures/on-your-mark/",
+      "ranks": [
+        {
+          "id": 16782,
+          "name": "Lion – Kindergarten",
+          "slug": "lion"
+        }
+      ],
+      "requirement_count": 3,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Play a game with your den."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Participate in an obstacle course relay."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Build a box derby and participate in a race."
+        }
+      ]
+    },
+    {
+      "id": 204678,
+      "slug": "outdoor-adventurer",
+      "title": "Outdoor Adventurer",
+      "link": "https://www.scouting.org/cub-scout-adventures/outdoor-adventurer/",
+      "ranks": [
+        {
+          "id": 16787,
+          "name": "Arrow of Light – 5th Grade",
+          "slug": "arrow-of-light"
+        }
+      ],
+      "requirement_count": 8,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Learn about the Scout Basic Essentials."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Determine what you will bring on an overnight campout — including a tent and sleeping bag/gear — and how you will carry your gear."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Review the four points of Scouting America’s SAFE Checklist and how you will apply them. on the campout."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Locate the campsite where you will be camping on a map."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "With your patrol or a Scouting America troop, participate in a campout."
+        },
+        {
+          "heading": "Requirement 6",
+          "text": "Upon arrival at the campout determine where to set up your campsite: kitchen, eating area, tents, and firepit. Help the patrol set up the patrol gear before setting up your own tent."
+        },
+        {
+          "heading": "Requirement 7",
+          "text": "Explain how to keep food safe and the kitchen area sanitary at the campsite. Demonstrate your knowledge during the campout."
+        },
+        {
+          "heading": "Requirement 8",
+          "text": "After your campout, discuss with your patrol what went well and what you would do differently next time. Include how you followed the Outdoor Code and Leave No Trace Principles for Kids."
+        }
+      ]
+    },
+    {
+      "id": 215216,
+      "slug": "paddle-craft",
+      "title": "Paddle Craft",
+      "link": "https://www.scouting.org/cub-scout-adventures/paddle-craft/",
+      "ranks": [
+        {
+          "id": 16787,
+          "name": "Arrow of Light – 5th Grade",
+          "slug": "arrow-of-light"
+        }
+      ],
+      "requirement_count": 9,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Before attempting requirements 5, 6, 7, 8 and 9 for this Adventure, you must pass Scouting America swimmer test."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Pick a paddle craft for which to complete all requirements: canoe, kayak, or stand-up paddleboard."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Review Safety Afloat."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Demonstrate how to choose and properly wear a life jacket that is the correct size."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Jump feet first into water over your head while wearing a life jacket then swim 25 feet wearing the life jacket."
+        },
+        {
+          "heading": "Requirement 6",
+          "text": "Demonstrate how to enter and exit a canoe, kayak, or stand-up paddleboard safely."
+        },
+        {
+          "heading": "Requirement 7",
+          "text": "Discuss what to do if your canoe or kayak tips over or you fall off your stand-up paddleboard."
+        },
+        {
+          "heading": "Requirement 8",
+          "text": "Learn two paddle strokes, power stroke and sweep."
+        },
+        {
+          "heading": "Requirement 9",
+          "text": "Have 30 minutes, or more, of canoe, kayak, or stand-up paddleboard paddle time."
+        }
+      ]
+    },
+    {
+      "id": 204668,
+      "slug": "paddle-onward",
+      "title": "Paddle Onward",
+      "link": "https://www.scouting.org/cub-scout-adventures/paddle-onward/",
+      "ranks": [
+        {
+          "id": 16786,
+          "name": "Webelos – 4th Grade",
+          "slug": "webelos"
+        }
+      ],
+      "requirement_count": 9,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Before attempting requirements 5, 6, 7, 8 and 9 for this Adventure, you must pass Scouting America swimmer test."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Pick a paddle craft for which to complete all requirements: canoe, kayak, or stand-up paddleboard."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Review Safety Afloat."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Demonstrate how to choose and properly wear a life jacket that is the correct size."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Jump feet first into water over your head while wearing a life jacket Then swim 25 feet wearing the life jacket."
+        },
+        {
+          "heading": "Requirement 6",
+          "text": "Demonstrate how to enter and exit a canoe, kayak, or stand-up paddleboard safely."
+        },
+        {
+          "heading": "Requirement 7",
+          "text": "Discuss what to do if your canoe or kayak tips over or you fall off your stand-up paddleboard."
+        },
+        {
+          "heading": "Requirement 8",
+          "text": "Learn how to pick a paddle that is the right size for you. Explore how the paddle craft responds to moving the paddle."
+        },
+        {
+          "heading": "Requirement 9",
+          "text": "Have 30 minutes, or more, of canoe, kayak, or stand-up paddleboard paddle time."
+        }
+      ]
+    },
+    {
+      "id": 203062,
+      "slug": "paws-for-action",
+      "title": "Paws for Action",
+      "link": "https://www.scouting.org/cub-scout-adventures/paws-for-action/",
+      "ranks": [
+        {
+          "id": 16785,
+          "name": "Bear – 3rd Grade",
+          "slug": "bear"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Familiarize yourself with the flag of the United States of America including the history, demonstrating how to raise and lower the flag, how to properly fold and display, and the United States etiquette."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Identify 3 symbols that represent the United States. Pick your favorite and make a model, work of art, or other craft that depicts the symbol."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Learn about the mission of any non-profit. Find out how they fund their activities and how volunteers are used to help."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Participate in a service project."
+        }
+      ]
+    },
+    {
+      "id": 198716,
+      "slug": "paws-for-water",
+      "title": "Paws for Water",
+      "link": "https://www.scouting.org/cub-scout-adventures/paws-for-water/",
+      "ranks": [
+        {
+          "id": 16784,
+          "name": "Wolf – 2nd Grade",
+          "slug": "wolf"
+        }
+      ],
+      "requirement_count": 6,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Learn about the swimming safety rules that you need to follow."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Demonstrate how to enter the swimming area properly."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Using the buddy system and staying within your ability group, go swimming with your den or family for 30 minutes."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Attempt at least one swimming stroke: front crawl, restful backstroke, or breaststroke."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Jump feet first into water that is chest high or deeper."
+        },
+        {
+          "heading": "Requirement 6",
+          "text": "Demonstrate how to exit the swimming area properly."
+        }
+      ]
+    },
+    {
+      "id": 198721,
+      "slug": "paws-of-skill",
+      "title": "Paws of Skill",
+      "link": "https://www.scouting.org/cub-scout-adventures/paws-of-skill/",
+      "ranks": [
+        {
+          "id": 16784,
+          "name": "Wolf – 2nd Grade",
+          "slug": "wolf"
+        }
+      ],
+      "requirement_count": 3,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "With your den, discuss sportsmanship and what it means to be a good sport. Make the connection between sportsmanship and the Scout Oath and the Scout Law."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Learn the rules of a team sport that you can play with your den, pack, family, or friends. After learning the rules, play the game for 30 minutes."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Visit or watch a team sporting event with your family or den. Look for ways the team works together and share with your family or den."
+        }
+      ]
+    },
+    {
+      "id": 197327,
+      "slug": "paws-on-the-path",
+      "title": "Paws on the Path",
+      "link": "https://www.scouting.org/cub-scout-adventures/paws-on-the-path/",
+      "ranks": [
+        {
+          "id": 16784,
+          "name": "Wolf – 2nd Grade",
+          "slug": "wolf"
+        }
+      ],
+      "requirement_count": 5,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Identify the Cub Scout Six Essentials. Show what you do with each item."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Learn about the buddy system and how it works in the outdoors. Pick a buddy for your walk."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Identify appropriate clothes and shoes for your walk outside. Do your best to wear them on your walk."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Learn about the Outdoor Code and Leave No Trace Principle for Kids."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "With your den, pack, or family, take a walk outside for at least 30 minutes to explore nature in your surroundings. Describe four different animals, domestic or wild, that you could see on your walk."
+        }
+      ]
+    },
+    {
+      "id": 204671,
+      "slug": "pedal-away",
+      "title": "Pedal Away",
+      "link": "https://www.scouting.org/cub-scout-adventures/pedal-away/",
+      "ranks": [
+        {
+          "id": 16786,
+          "name": "Webelos – 4th Grade",
+          "slug": "webelos"
+        }
+      ],
+      "requirement_count": 6,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Decide on gear and supplies you should bring for a long bike ride."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Discover how multi-gear bicycles work and how they benefit a rider ."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Practice how to lubricate a chain."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Pick a bicycle lock that you will use. Demonstrate how it locks and unlocks, how it secures your bicycle, and how you carry it while you are riding your bicycle."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "With your family, den, or pack, use a map and plan a bicycle ride that is at least 5 miles."
+        },
+        {
+          "heading": "Requirement 6",
+          "text": "With your den, pack, or family and using the buddy system, go on a bicycle ride that is a minimum of 5 miles."
+        }
+      ]
+    },
+    {
+      "id": 198722,
+      "slug": "pedal-with-the-pack",
+      "title": "Pedal With the Pack",
+      "link": "https://www.scouting.org/cub-scout-adventures/pedal-with-the-pack/",
+      "ranks": [
+        {
+          "id": 16784,
+          "name": "Wolf – 2nd Grade",
+          "slug": "wolf"
+        }
+      ],
+      "requirement_count": 6,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Show how to properly wear a bicycle helmet. Show you can take off and put on without help."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Decide what you should wear when riding a bike."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Learn about different types of bikes and when/where you might ride these different types."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Demonstrate you can start and stop your bicycle without help."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Demonstrate proper hand signals."
+        },
+        {
+          "heading": "Requirement 6",
+          "text": "With your den, pack, or family, follow the buddy system and take a bike ride."
+        }
+      ]
+    },
+    {
+      "id": 204679,
+      "slug": "personal-fitness",
+      "title": "Personal Fitness",
+      "link": "https://www.scouting.org/cub-scout-adventures/personal-fitness/",
+      "ranks": [
+        {
+          "id": 16787,
+          "name": "Arrow of Light – 5th Grade",
+          "slug": "arrow-of-light"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Plan a balanced meal that you would eat when camping. Prepare that meal using the gear you would use on a campout."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Examine what it is to be physically fit and how you incorporate this in your life. Track the number of times you are active for 30 minutes or longer over a 14-day period. Share with your patrol or family what you enjoyed and if you feel you are living up to the Scout Oath of being physically strong."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Be active for 30 minutes with your patrol, a younger den, or at least one other person in a way that includes both stretching and moving."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Review your Scouting America Annual Health and Medical Record with your parent or legal guardian. Discuss your ability to participate in Arrow of Light patrol and pack activities."
+        }
+      ]
+    },
+    {
+      "id": 208810,
+      "slug": "pick-my-path-lion",
+      "title": "Pick My Path",
+      "link": "https://www.scouting.org/cub-scout-adventures/pick-my-path-lion/",
+      "ranks": [
+        {
+          "id": 16782,
+          "name": "Lion – Kindergarten",
+          "slug": "lion"
+        }
+      ],
+      "requirement_count": 3,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Explain that choices have consequences."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Perform a Good Turn for another person."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Learn the basic rules of a game and play the game."
+        }
+      ]
+    },
+    {
+      "id": 215238,
+      "slug": "race-time-aol",
+      "title": "Race Time AOL",
+      "link": "https://www.scouting.org/cub-scout-adventures/race-time-aol/",
+      "ranks": [
+        {
+          "id": 16787,
+          "name": "Arrow of Light – 5th Grade",
+          "slug": "arrow-of-light"
+        }
+      ],
+      "requirement_count": 5,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "With adult supervision, build either a Pinewood Derby® car or a Raingutter Regatta™ boat."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Learn the rules of the race for the vehicle chosen in requirement 1."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Mentor a younger den to prepare for the race."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Before the race, discuss with your patrol den how you will demonstrate good sportsmanship during the race."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Participate in a Pinewood Derby® or a Raingutter Regatta™."
+        }
+      ]
+    },
+    {
+      "id": 203076,
+      "slug": "race-time-bear",
+      "title": "Race Time Bear",
+      "link": "https://www.scouting.org/cub-scout-adventures/race-time-bear/",
+      "ranks": [
+        {
+          "id": 16785,
+          "name": "Bear – 3rd Grade",
+          "slug": "bear"
+        }
+      ],
+      "requirement_count": 5,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "With an adult, build either a Pinewood Derby® car or a Raingutter Regatta™ boat."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Learn the rules of the race for the vehicle chosen in requirement 1."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Identify how you could increase the speed of your chosen vehicle."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Before the race, discuss with your den how you will demonstrate good sportsmanship during the race."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Participate in a Pinewood Derby® or a Raingutter Regatta™."
+        }
+      ]
+    },
+    {
+      "id": 204244,
+      "slug": "race-time-lion",
+      "title": "Race Time Lion",
+      "link": "https://www.scouting.org/cub-scout-adventures/race-time-lion/",
+      "ranks": [
+        {
+          "id": 16782,
+          "name": "Lion – Kindergarten",
+          "slug": "lion"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "With your Lion adult partner, assemble and decorate either a Pinewood Derby® car or a Raingutter Regatta™ boat."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Learn the rules of the race for the vehicle chosen in Requirement 1."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Before the race, discuss with your Lion adult partner how you will demonstrate good sportsmanship during the race."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "With your Lion adult partner, participate in a Pinewood Derby® or a Raingutter Regatta™."
+        }
+      ]
+    },
+    {
+      "id": 204742,
+      "slug": "race-time-tiger",
+      "title": "Race Time Tiger",
+      "link": "https://www.scouting.org/cub-scout-adventures/race-time-tiger/",
+      "ranks": [
+        {
+          "id": 16783,
+          "name": "Tiger – 1st Grade",
+          "slug": "tiger"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "With your Tiger adult partner, assemble and decorate either a Pinewood Derby® car or a Raingutter Regatta™ boat."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Learn the rules of the race for the vehicle chosen in requirement 1."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Before the race, discuss with your Tiger adult partner how you will demonstrate good sportsmanship during the race."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "With your Tiger adult partner, participate in a Pinewood Derby® or a Raingutter Regatta™."
+        }
+      ]
+    },
+    {
+      "id": 204672,
+      "slug": "race-time-webelos",
+      "title": "Race Time Webelos",
+      "link": "https://www.scouting.org/cub-scout-adventures/race-time-webelos/",
+      "ranks": [
+        {
+          "id": 16786,
+          "name": "Webelos – 4th Grade",
+          "slug": "webelos"
+        }
+      ],
+      "requirement_count": 5,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "With an adult, build either a Pinewood Derby® and car or a Raingutter Regatta™ boat."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Learn the rules of the race for the vehicle chosen in requirement 1."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Explore the properties of friction and how it impacts your chosen vehicle."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Before the race, discuss with your den how you will demonstrate good sportsmanship during the race."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Participate in a Pinewood Derby® or a Raingutter Regatta™."
+        }
+      ]
+    },
+    {
+      "id": 198723,
+      "slug": "race-time-wolf",
+      "title": "Race Time Wolf",
+      "link": "https://www.scouting.org/cub-scout-adventures/race-time-wolf/",
+      "ranks": [
+        {
+          "id": 16784,
+          "name": "Wolf – 2nd Grade",
+          "slug": "wolf"
+        }
+      ],
+      "requirement_count": 5,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "With an adult, build either a Pinewood Derby® car or a Raingutter Regatta™ boat."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Learn the rules of the race for the vehicle chosen in requirement 1."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Identify how you could increase the speed of your chosen vehicle."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Before the race, discuss with your den how you will demonstrate good sportsmanship during the race."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Participate in a Pinewood Derby® or a Raingutter Regatta™."
+        }
+      ]
+    },
+    {
+      "id": 204246,
+      "slug": "ready-set-grow",
+      "title": "Ready, Set, Grow",
+      "link": "https://www.scouting.org/cub-scout-adventures/ready-set-grow/",
+      "ranks": [
+        {
+          "id": 16782,
+          "name": "Lion – Kindergarten",
+          "slug": "lion"
+        }
+      ],
+      "requirement_count": 3,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Discover where the food we eat comes from."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Plant a small garden outside or in a container."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Visit with an individual who can demonstrate different ways to garden (outside, greenhouse, container, etc.) and the basic skills needed to garden."
+        }
+      ]
+    },
+    {
+      "id": 203077,
+      "slug": "roaring-laughter",
+      "title": "Roaring Laughter",
+      "link": "https://www.scouting.org/cub-scout-adventures/roaring-laughter/",
+      "ranks": [
+        {
+          "id": 16785,
+          "name": "Bear – 3rd Grade",
+          "slug": "bear"
+        }
+      ],
+      "requirement_count": 5,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Think about what makes you laugh. Discuss these with your den or family."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Practice reading tongue twisters."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Play charades with your den or family."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Have a “funniest joke contest” with your den or family."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Practice “run-ons” with your den or family."
+        }
+      ]
+    },
+    {
+      "id": 204743,
+      "slug": "rolling-tigers",
+      "title": "Rolling Tigers",
+      "link": "https://www.scouting.org/cub-scout-adventures/rolling-tigers/",
+      "ranks": [
+        {
+          "id": 16783,
+          "name": "Tiger – 1st Grade",
+          "slug": "tiger"
+        }
+      ],
+      "requirement_count": 5,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Learn the ABC’s of bike gear (air, brakes, chain.)"
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "With your den or Tiger adult partner, learn about the safety gear you should use while riding a bicycle."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "With your den or Tiger adult partner, learn the safety rules to follow when riding a bicycle."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "With your den or Tiger adult partner, demonstrate proper hand signals."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "With your Tiger adult partner or family, ride a bike or begin learning how to ride a bike."
+        }
+      ]
+    },
+    {
+      "id": 197341,
+      "slug": "running-with-the-pack",
+      "title": "Running With the Pack",
+      "link": "https://www.scouting.org/cub-scout-adventures/running-with-the-pack/",
+      "ranks": [
+        {
+          "id": 16784,
+          "name": "Wolf – 2nd Grade",
+          "slug": "wolf"
+        }
+      ],
+      "requirement_count": 6,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Sample 3 different foods that are naturally 3 different colors . The food must be a protein, vegetable, fruit, dairy, or a grain ."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Demonstrate the proper way to brush your teeth."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Be active for 30 minutes with your den or at least 1 other person that includes both stretching and moving."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Be active for 10 minutes doing personal exercises."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Do a relaxing activity for 10 minutes."
+        },
+        {
+          "heading": "Requirement 6",
+          "text": "Review your Scouting America Annual Health and Medical record with your parent or guardian. Discuss your ability to participate in den and pack activities."
+        }
+      ]
+    },
+    {
+      "id": 204744,
+      "slug": "safe-and-smart",
+      "title": "Safe and Smart",
+      "link": "https://www.scouting.org/cub-scout-adventures/safe-and-smart/",
+      "ranks": [
+        {
+          "id": 16783,
+          "name": "Tiger – 1st Grade",
+          "slug": "tiger"
+        }
+      ],
+      "requirement_count": 7,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Memorize your address. Recite it to your Tiger adult partner or den leader."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Memorize an emergency contact’s phone number. Recite it to your Tiger adult partner or den leader."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Show you can Stop, Drop and Roll."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "With your Tiger adult partner or den leader, create a fire escape plan for your home or den meeting place. Include your outside meet-up spot. Practice the escape route you would take."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "With your Tiger adult partner, find the location of the smoke detectors in your home or den meeting place. Confirm they are working properly."
+        },
+        {
+          "heading": "Requirement 6",
+          "text": "With your Tiger adult partner or den leader, learn why matches and lighters are only for adults."
+        },
+        {
+          "heading": "Requirement 7",
+          "text": "Visit an emergency responder station or have an emergency responder visit your den."
+        }
+      ]
+    },
+    {
+      "id": 197366,
+      "slug": "safety-in-numbers",
+      "title": "Safety in Numbers",
+      "link": "https://www.scouting.org/cub-scout-adventures/safety-in-numbers/",
+      "ranks": [
+        {
+          "id": 16784,
+          "name": "Wolf – 2nd Grade",
+          "slug": "wolf"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "With permission from your parent or legal guardian, watch the ”Protect Yourself Rules” video for the Wolf rank."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Discuss “safe touch” as seen in the Protect Yourself Rules video."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Learn about the buddy system and demonstrate how it works."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Review common safety rules and demonstrate the proper use of playground equipment."
+        }
+      ]
+    },
+    {
+      "id": 203078,
+      "slug": "salmon-run",
+      "title": "Salmon Run",
+      "link": "https://www.scouting.org/cub-scout-adventures/salmon-run/",
+      "ranks": [
+        {
+          "id": 16785,
+          "name": "Bear – 3rd Grade",
+          "slug": "bear"
+        }
+      ],
+      "requirement_count": 6,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "With your den or an adult, identify the attributes of qualified adult supervision at a swimming activity."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Learn the three swimming ability groups for Scouting America and water depths appropriate for each."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Go swimming with your den, pack, or family for 30 minutes using the buddy system."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Demonstrate the use the buddy system, buddy checks, and ability groups with your den or an adult."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Attempt Scouting America beginner swim test."
+        },
+        {
+          "heading": "Requirement 6",
+          "text": "Demonstrate both a reach rescue and a throw rescue."
+        }
+      ]
+    },
+    {
+      "id": 204745,
+      "slug": "sky-is-the-limit",
+      "title": "Sky is the Limit",
+      "link": "https://www.scouting.org/cub-scout-adventures/sky-is-the-limit/",
+      "ranks": [
+        {
+          "id": 16783,
+          "name": "Tiger – 1st Grade",
+          "slug": "tiger"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Observe the night sky with your den or Tiger adult partner. Talk about the items you see or might see there."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Look at distant objects through a telescope, binoculars, or camera. Show how to focus the device you choose."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Observe in the sky or select from a book, chart, computer, or electronic device two constellations that are easy to see in the night sky. With your den or Tiger adult partner, find out the constellation name and how to identify them. Create a picture of one of the constellations."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Create a homemade model of a constellation."
+        }
+      ]
+    },
+    {
+      "id": 198724,
+      "slug": "spirit-of-the-water",
+      "title": "Spirit of the Water",
+      "link": "https://www.scouting.org/cub-scout-adventures/spirit-of-the-water/",
+      "ranks": [
+        {
+          "id": 16784,
+          "name": "Wolf – 2nd Grade",
+          "slug": "wolf"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Discover where the water in your home comes from."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Discuss how water can become polluted."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Share some ways you can conserve water in your home."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Discover how water in your community is treated to become safe to drink."
+        }
+      ]
+    },
+    {
+      "id": 203063,
+      "slug": "standing-tall",
+      "title": "Standing Tall",
+      "link": "https://www.scouting.org/cub-scout-adventures/standing-tall/",
+      "ranks": [
+        {
+          "id": 16785,
+          "name": "Bear – 3rd Grade",
+          "slug": "bear"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "With permission from your parent or legal guardian, watch the Protect Yourself Rules video for the Bear rank."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Complete the Personal Space Bubble worksheet that is part of the Protect Yourself Rules resources."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "With your parent or legal guardian, set up a family policy for digital devices."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Identify common personal safety gear for your head, eyes, mouth, hands, and feet. List how each of these items protect you. Demonstrate the proper use of personal safety gear for an activity."
+        }
+      ]
+    },
+    {
+      "id": 204746,
+      "slug": "stories-in-shapes",
+      "title": "Stories in Shapes",
+      "link": "https://www.scouting.org/cub-scout-adventures/stories-in-shapes/",
+      "ranks": [
+        {
+          "id": 16783,
+          "name": "Tiger – 1st Grade",
+          "slug": "tiger"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Explore art in your community."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Look closely at art or a picture of art with your den or Tiger adult partner. Decide what you like about the art, and share your ideas with your den, family or Tiger adult partner."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Create a piece of art using shapes."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Learn how to spell your name in Braille and sign language."
+        }
+      ]
+    },
+    {
+      "id": 204642,
+      "slug": "stronger-faster-higher",
+      "title": "Stronger, Faster, Higher",
+      "link": "https://www.scouting.org/cub-scout-adventures/stronger-faster-higher/",
+      "ranks": [
+        {
+          "id": 16786,
+          "name": "Webelos – 4th Grade",
+          "slug": "webelos"
+        }
+      ],
+      "requirement_count": 5,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "With your den or family, plan, cook, and eat a balanced meal."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Be active for 30 minutes with your den or at least one other person in a way that includes both stretching and moving."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Be active for 15 minutes doing personal exercises that boost your heart rate, use your muscles, and work on flexibility."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Do a relaxing activity for 10 minutes."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Review your Scouting America Annual Health and Medical Record with your parent or legal guardian. Discuss your ability to participate in den and pack activities."
+        }
+      ]
+    },
+    {
+      "id": 215251,
+      "slug": "summertime-fun-aol",
+      "title": "Summertime Fun AOL",
+      "link": "https://www.scouting.org/cub-scout-adventures/summertime-fun-aol/",
+      "ranks": [
+        {
+          "id": 16787,
+          "name": "Arrow of Light – 5th Grade",
+          "slug": "arrow-of-light"
+        }
+      ],
+      "requirement_count": 1,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Anytime during May through August participate in a total of three Cub Scout activities."
+        }
+      ]
+    },
+    {
+      "id": 203079,
+      "slug": "summertime-fun-bear",
+      "title": "Summertime Fun Bear",
+      "link": "https://www.scouting.org/cub-scout-adventures/summertime-fun-bear/",
+      "ranks": [
+        {
+          "id": 16785,
+          "name": "Bear – 3rd Grade",
+          "slug": "bear"
+        }
+      ],
+      "requirement_count": 1,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Anytime during May through August participate in a total of three Cub Scout activities."
+        }
+      ]
+    },
+    {
+      "id": 204747,
+      "slug": "summertime-fun-tiger",
+      "title": "Summertime Fun Tiger",
+      "link": "https://www.scouting.org/cub-scout-adventures/summertime-fun-tiger/",
+      "ranks": [
+        {
+          "id": 16783,
+          "name": "Tiger – 1st Grade",
+          "slug": "tiger"
+        }
+      ],
+      "requirement_count": 1,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Anytime during May through August participate in a total of three Cub Scout activities."
+        }
+      ]
+    },
+    {
+      "id": 204673,
+      "slug": "summertime-fun-webelos",
+      "title": "Summertime Fun Webelos",
+      "link": "https://www.scouting.org/cub-scout-adventures/summertime-fun-webelos/",
+      "ranks": [
+        {
+          "id": 16786,
+          "name": "Webelos – 4th Grade",
+          "slug": "webelos"
+        }
+      ],
+      "requirement_count": 1,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Anytime during May through August participate in a total of three Cub Scout activities."
+        }
+      ]
+    },
+    {
+      "id": 198725,
+      "slug": "summertime-fun-wolf",
+      "title": "Summertime Fun Wolf",
+      "link": "https://www.scouting.org/cub-scout-adventures/summertime-fun-wolf/",
+      "ranks": [
+        {
+          "id": 16784,
+          "name": "Wolf – 2nd Grade",
+          "slug": "wolf"
+        }
+      ],
+      "requirement_count": 1,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Anytime during May through August participate in a total of three Cub Scout activities."
+        }
+      ]
+    },
+    {
+      "id": 203080,
+      "slug": "super-science",
+      "title": "Super Science",
+      "link": "https://www.scouting.org/cub-scout-adventures/super-science/",
+      "ranks": [
+        {
+          "id": 16785,
+          "name": "Bear – 3rd Grade",
+          "slug": "bear"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Conduct static electricity investigation."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Conduct the sink-or-float investigation."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Conduct the color-morphing investigation."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Conduct the color-layering investigation."
+        }
+      ]
+    },
+    {
+      "id": 215256,
+      "slug": "swimming",
+      "title": "Swimming",
+      "link": "https://www.scouting.org/cub-scout-adventures/swimming/",
+      "ranks": [
+        {
+          "id": 16787,
+          "name": "Arrow of Light – 5th Grade",
+          "slug": "arrow-of-light"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Review Safe Swim Defense."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Explain the meaning of “order of rescue” and demonstrate the reach and throw rescue techniques from land."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Attempt Scouting America swimmer test."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Have 30 minutes or more of free swim time during which you practice the buddy system and stay within your ability group. The qualified adult supervision should conduct at least three buddy checks per half hour of swimming."
+        }
+      ]
+    },
+    {
+      "id": 204732,
+      "slug": "team-tiger",
+      "title": "Team Tiger",
+      "link": "https://www.scouting.org/cub-scout-adventures/team-tiger/",
+      "ranks": [
+        {
+          "id": 16783,
+          "name": "Tiger – 1st Grade",
+          "slug": "tiger"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Play a game with your den, or family members, that has a set of rules. Discuss why rules are important to the game you are playing."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "With your Tiger Adult Partner, choose a job that will help your team. Follow through by doing that job at least once."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Play a game that requires at least 2 teams with your den, or two other family members. Afterwards discuss what it means to be part of a team and what makes a good team member."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Participate in a service project."
+        }
+      ]
+    },
+    {
+      "id": 204748,
+      "slug": "tech-all-around",
+      "title": "Tech All Around",
+      "link": "https://www.scouting.org/cub-scout-adventures/tech-all-around/",
+      "ranks": [
+        {
+          "id": 16783,
+          "name": "Tiger – 1st Grade",
+          "slug": "tiger"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Discover technology around your home, meeting place, or neighborhood."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Discover ways that digital technology can make life easier."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Identify an item of digital technology you use at home. Demonstrate to your adult partner how you use it safely."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "With your parent or legal guardian, set up a policy for digital devices."
+        }
+      ]
+    },
+    {
+      "id": 204674,
+      "slug": "tech-on-the-trail",
+      "title": "Tech on the Trail",
+      "link": "https://www.scouting.org/cub-scout-adventures/tech-on-the-trail/",
+      "ranks": [
+        {
+          "id": 16786,
+          "name": "Webelos – 4th Grade",
+          "slug": "webelos"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Discuss how technology can help keep you safe in the outdoors."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Explore Global Positioning Satellite and how to use it."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "With an adult, choose an online mapping program tool and plan a 2-mile trek."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Take your 2-mile trek."
+        }
+      ]
+    },
+    {
+      "id": 205037,
+      "slug": "tiger-bites",
+      "title": "Tiger Bites",
+      "link": "https://www.scouting.org/cub-scout-adventures/tiger-bites/",
+      "ranks": [
+        {
+          "id": 16783,
+          "name": "Tiger – 1st Grade",
+          "slug": "tiger"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Identify the 5 different food groups."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Practice hand washing. Point out when you should wash your hands."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Be active for 30 minutes."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Practice methods that help you sleep."
+        }
+      ]
+    },
+    {
+      "id": 204734,
+      "slug": "tiger-circles",
+      "title": "Tiger Circles",
+      "link": "https://www.scouting.org/cub-scout-adventures/tiger-circles/",
+      "ranks": [
+        {
+          "id": 16783,
+          "name": "Tiger – 1st Grade",
+          "slug": "tiger"
+        }
+      ],
+      "requirement_count": 3,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "With your parent or legal guardian talk about your family’s faith traditions. Identify three holidays or celebrations that are part of your family’s faith traditions. Draw a picture of your favorite family’s faith tradition holiday or celebration."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "With your family, attend a religious service OR other gathering that shows how your family expresses Family & Reverence."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Carry out an act of kindness."
+        }
+      ]
+    },
+    {
+      "id": 204750,
+      "slug": "tiger-iffic",
+      "title": "Tiger-iffic!",
+      "link": "https://www.scouting.org/cub-scout-adventures/tiger-iffic/",
+      "ranks": [
+        {
+          "id": 16783,
+          "name": "Tiger – 1st Grade",
+          "slug": "tiger"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Play at least two different games by yourself; one may be a video game."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Play a board game or another inside game with one or more members of your den or family."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "With other members of your den or family, invent a game, or change the rules of a game you know, and play the game."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Play a team game with your den or family."
+        }
+      ]
+    },
+    {
+      "id": 204749,
+      "slug": "tiger-tag",
+      "title": "Tiger Tag",
+      "link": "https://www.scouting.org/cub-scout-adventures/tiger-tag/",
+      "ranks": [
+        {
+          "id": 16783,
+          "name": "Tiger – 1st Grade",
+          "slug": "tiger"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Play an active game with your den. Share with your Tiger adult partner or your den why you like this game."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Play a relay game with your den. Share with your Tiger adult partner or your den why you like this game."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Discuss what it means to be a good sport in a game with your Tiger adult partner or other Tigers."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Attend a sporting event."
+        }
+      ]
+    },
+    {
+      "id": 204751,
+      "slug": "tigers-in-the-water",
+      "title": "Tigers in the Water",
+      "link": "https://www.scouting.org/cub-scout-adventures/tigers-in-the-water/",
+      "ranks": [
+        {
+          "id": 16783,
+          "name": "Tiger – 1st Grade",
+          "slug": "tiger"
+        }
+      ],
+      "requirement_count": 6,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Learn about the swimming safety rules that you need to follow."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Demonstrate how to enter the swimming area properly."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "With your Tiger adult partner as your buddy, be active in water depths matching your ability for 20 minutes."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Place your face in the water and blow bubbles."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Demonstrate a flutter kick."
+        },
+        {
+          "heading": "Requirement 6",
+          "text": "Demonstrate how to exit the swimming area properly."
+        }
+      ]
+    },
+    {
+      "id": 204730,
+      "slug": "tigers-in-the-wild",
+      "title": "Tigers in the Wild",
+      "link": "https://www.scouting.org/cub-scout-adventures/tigers-in-the-wild/",
+      "ranks": [
+        {
+          "id": 16783,
+          "name": "Tiger – 1st Grade",
+          "slug": "tiger"
+        }
+      ],
+      "requirement_count": 5,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Identify the Cub Scout Six Essentials. Show what you do with each item."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "With your den leader or Tiger adult partner, learn about the Outdoor Code."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "With your den, pack, or family, take a walk outside spending for at least 20 minutes exploring the outdoors with your Cub Scout Six Essentials. While outside, identify things that you see with your Tiger adult partner that are natural and things that are manmade."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Identify common animals that are found where you live. Learn which of those animals is domesticated and which animal is wild. Draw a picture of your favorite animal."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Look for a tree where you live. Describe how this tree is helpful."
+        }
+      ]
+    },
+    {
+      "id": 204733,
+      "slug": "tigers-roar",
+      "title": "Tiger’s Roar",
+      "link": "https://www.scouting.org/cub-scout-adventures/tigers-roar/",
+      "ranks": [
+        {
+          "id": 16783,
+          "name": "Tiger – 1st Grade",
+          "slug": "tiger"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "With permission from your parent or legal guardian watch the Protect Yourself Rules video for the Tiger rank."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "With your Tiger adult partner, demonstrate Shout, Run, Tell as explained in the Protect Yourself Rules video."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "With your Tiger adult partner, demonstrate how to access emergency services."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "With your Tiger adult partner, demonstrate that you know what to do if you get lost or separated ."
+        }
+      ]
+    },
+    {
+      "id": 204247,
+      "slug": "time-to-swim",
+      "title": "Time to Swim",
+      "link": "https://www.scouting.org/cub-scout-adventures/time-to-swim/",
+      "ranks": [
+        {
+          "id": 16782,
+          "name": "Lion – Kindergarten",
+          "slug": "lion"
+        }
+      ],
+      "requirement_count": 5,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Learn about the swimming safety rules that you need to follow."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Demonstrate how to enter the swimming area properly."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "With your Lion adult partner as your buddy, be active in water depths matching your ability for 20 minutes."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Place your face in the water and blow bubbles."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Demonstrate how to exit the swimming area properly."
+        }
+      ]
+    },
+    {
+      "id": 204641,
+      "slug": "webelos-walkabout",
+      "title": "Webelos Walkabout",
+      "link": "https://www.scouting.org/cub-scout-adventures/webelos-walkabout/",
+      "ranks": [
+        {
+          "id": 16786,
+          "name": "Webelos – 4th Grade",
+          "slug": "webelos"
+        }
+      ],
+      "requirement_count": 7,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Prepare for a 2-mile walk outside. Gather your Cub Scout Six Essentials and weather appropriate clothing and shoes."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Plan a 2-mile route for your walk."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Check the weather forecast for the time of your planned 2-mile walk."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Review the four points of Scouting America SAFE Checklist and how you will apply them on your 2-mile walk."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Demonstrate first aid for each of the following events that could occur on your 2-mile walk: blister, sprained ankle, sunburn, dehydration and heat related illness."
+        },
+        {
+          "heading": "Requirement 6",
+          "text": "With your den, pack, or family, go on your 2-mile walk while practicing the Leave No Trace Principles for Kids and Outdoor Code."
+        },
+        {
+          "heading": "Requirement 7",
+          "text": "After your 2-mile walk, discuss with your den what went well and what you would do differently next time."
+        }
+      ]
+    },
+    {
+      "id": 203081,
+      "slug": "whittling",
+      "title": "Whittling",
+      "link": "https://www.scouting.org/cub-scout-adventures/whittling/",
+      "ranks": [
+        {
+          "id": 16785,
+          "name": "Bear – 3rd Grade",
+          "slug": "bear"
+        }
+      ],
+      "requirement_count": 4,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Read, understand, and promise to abide by the “Cub Scout Knife Safety Rules.”"
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Demonstrate the knife safety circle."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Demonstrate that you know how to care for and use your pocketknife safely."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Make two carvings with a pocketknife."
+        }
+      ]
+    },
+    {
+      "id": 204675,
+      "slug": "yo-yo",
+      "title": "Yo-yo",
+      "link": "https://www.scouting.org/cub-scout-adventures/yo-yo/",
+      "ranks": [
+        {
+          "id": 16786,
+          "name": "Webelos – 4th Grade",
+          "slug": "webelos"
+        }
+      ],
+      "requirement_count": 7,
+      "requirements": [
+        {
+          "heading": "Requirement 1",
+          "text": "Learn the safety rules of using a yo-yo and always follow them."
+        },
+        {
+          "heading": "Requirement 2",
+          "text": "Discover how to find the proper yo-yo string length for you."
+        },
+        {
+          "heading": "Requirement 3",
+          "text": "Explain why it is important to have the correct string length and to be in the right location before throwing a yo-yo."
+        },
+        {
+          "heading": "Requirement 4",
+          "text": "Demonstrate how to properly string a yo-yo and how to create a slip knot."
+        },
+        {
+          "heading": "Requirement 5",
+          "text": "Conduct the pendulum experiment with a yo-yo. Explain what happens to the yo-yo when the string is longer."
+        },
+        {
+          "heading": "Requirement 6",
+          "text": "Show that you can properly wind a yo-yo."
+        },
+        {
+          "heading": "Requirement 7",
+          "text": "Attempt each of the following: gravity pull, sleeper, breakaway."
+        }
+      ]
+    }
+  ]
+}

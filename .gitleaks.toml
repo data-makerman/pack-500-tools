@@ -1,0 +1,16 @@
+title = "Pack 500 Tools baseline"
+
+[report]
+path = "gitleaks-report.json"
+format = "json"
+
+[allowlist]
+description = "Allow sanitized fixtures and tooling baselines"
+regexes = [
+  "FAKE_SECRET",
+  "PACK500_SAMPLE"
+]
+paths = [
+  "sample_data/.*",
+  "[.]secrets[.]baseline"
+]

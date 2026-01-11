@@ -1,0 +1,13 @@
+# Patterns ignored by scan_pii.py (Presidio hook)
+adventure_requirements.json
+create_mail_merge.ipynb
+family_talent/remind_missing_talents.py
+fix_roster.py
+graduation_2025/generate_emails_to_leaders.py
+member_notices/notify_renewals_and_lapses.py
+progress_reports/create_progress_reports.py
+roster_checklist_usage.md
+scan_pii.py
+scrape_adventure_requirements.py
+syt_records/parse_record.ipynb
+generate_roster_checklist.py
