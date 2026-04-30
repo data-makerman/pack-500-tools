@@ -1,3 +1,5 @@
+"""Build Pack 500 membership renewal and lapse reminder emails from BSA exports."""
+
 from __future__ import annotations
 
 import argparse
@@ -29,9 +31,12 @@ except ModuleNotFoundError:  # pragma: no cover - allow running without Google l
     HttpError = Exception  # type: ignore[assignment]
 
 
+DEFAULT_FROM_NAME = "Pack 500 Cubmaster"
+DEFAULT_FROM_EMAIL = "cubmaster@pack500.org"
+DEFAULT_PREVIEW_RECIPIENT = DEFAULT_FROM_EMAIL
 GMAIL_SCOPES = ["https://www.googleapis.com/auth/gmail.send"]
 EMAIL_SIGNATURE = (
-    "~Cubmaster Michael Akerman\n"
+    f"~{DEFAULT_FROM_NAME}\n"
     "Cub Scout Pack 500, Scouting America"
 )
 EMAIL_POLICY = policy.default.clone(max_line_length=1000)
@@ -43,6 +48,7 @@ class RenewalNotice:
     member_id: str
     first_name: str
     last_name: str
+    suffix: str
     email: Optional[str]
     expiration: Optional[dt.date]
 
@@ -52,6 +58,13 @@ class EmailJob:
     notice: RenewalNotice
     subject: str
     body: str
+
+
+def previous_report_arg(value: str) -> Optional[Path]:
+    text = (value or "").strip()
+    if not text or text.lower() == "none":
+        return None
+    return Path(text)
 
 
 def parse_args() -> argparse.Namespace:
@@ -66,6 +79,15 @@ def parse_args() -> argparse.Namespace:
         default=Path("member_notices/2026-01/NonRenewedMembership.csv"),
         type=Path,
         help="Path to the Non Renewed Membership report CSV.",
+    )
+    parser.add_argument(
+        "--previous-non-renewed",
+        required=True,
+        type=previous_report_arg,
+        help=(
+            "Non Renewed Membership report from an earlier run. Members appearing in both reports are "
+            "skipped so they only receive the lapsed notice once. Use 'None' if there is no earlier report."
+        ),
     )
     parser.add_argument(
         "--roster",
@@ -107,12 +129,12 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--from-name",
-        default="Cubmaster Michael Akerman",
+        default=DEFAULT_FROM_NAME,
         help="Display name to use in the From header.",
     )
     parser.add_argument(
         "--from-email",
-        default="cubmaster@pack500.org",
+        default=DEFAULT_FROM_EMAIL,
         help="Email address that owns the Gmail credential.",
     )
     parser.add_argument(
@@ -121,7 +143,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--preview-recipient",
-        default="michaeljohnakerman@gmail.com",
+        default=DEFAULT_PREVIEW_RECIPIENT,
         help="Address that receives proofs when --send-to-members is not set.",
     )
     parser.add_argument(
@@ -211,9 +233,32 @@ def best_email(values: Sequence[object]) -> Optional[str]:
     return None
 
 
-def build_lapsed_notices(nonrenewed_df: pd.DataFrame) -> List[RenewalNotice]:
+def clean_text(value: object) -> str:
+    if value is None:
+        return ""
+    if isinstance(value, float) and pd.isna(value):
+        return ""
+    text = str(value).strip()
+    if not text:
+        return ""
+    if text.lower() == "nan":
+        return ""
+    return text
+
+
+def build_lapsed_notices(
+    nonrenewed_df: pd.DataFrame,
+    *,
+    skip_member_ids: Iterable[str] = (),
+) -> List[RenewalNotice]:
+    skip = {str(member_id).strip() for member_id in skip_member_ids if str(member_id).strip()}
     notices: List[RenewalNotice] = []
+    skipped = 0
     for row in nonrenewed_df.to_dict("records"):
+        member_id = str(row.get("memberid", "")).strip()
+        if member_id in skip:
+            skipped += 1
+            continue
         email = best_email([
             row.get("email"),
             row.get("primaryemail"),
@@ -221,13 +266,16 @@ def build_lapsed_notices(nonrenewed_df: pd.DataFrame) -> List[RenewalNotice]:
         ])
         notice = RenewalNotice(
             notice_type="lapsed",
-            member_id=row.get("memberid", ""),
-            first_name=str(row.get("firstname", "")).strip(),
-            last_name=str(row.get("lastname", "")).strip(),
+            member_id=member_id,
+            first_name=clean_text(row.get("firstname")),
+            last_name=clean_text(row.get("lastname")),
+            suffix="",  # Suffix is not provided in the NonRenewedMembership report
             email=email,
             expiration=parse_date(row.get("strexpirydt") or row.get("expirydtstr")),
         )
         notices.append(notice)
+    if skipped:
+        logging.info("Skipped %s lapsed members that already received a prior notice.", skipped)
     return notices
 
 
@@ -266,8 +314,9 @@ def build_renewal_notices(
             RenewalNotice(
                 notice_type="expiring",
                 member_id=member_id,
-                first_name=str(row.get("firstname", "")).strip(),
-                last_name=str(row.get("lastname", "")).strip(),
+                first_name=clean_text(row.get("firstname")),
+                last_name=clean_text(row.get("lastname")),
+                suffix=clean_text(row.get("suffix")),
                 email=email,
                 expiration=expiration,
             )
@@ -276,7 +325,7 @@ def build_renewal_notices(
 
 
 def render_lapsed_email(notice: RenewalNotice, *, as_of: dt.date) -> EmailJob:
-    member_name = (notice.first_name + " " + notice.last_name).strip()
+    member_name = f"{notice.first_name} {notice.last_name}{' '+notice.suffix if notice.suffix else ''}".strip()
     date_text = notice.expiration.strftime("%B %d, %Y") if notice.expiration else "earlier this year"
     subject = f"Pack 500 membership courtesy notice for {member_name or 'your family'}"
     body = (
@@ -295,7 +344,7 @@ def render_lapsed_email(notice: RenewalNotice, *, as_of: dt.date) -> EmailJob:
 
 
 def render_renewal_email(notice: RenewalNotice, *, as_of: dt.date) -> EmailJob:
-    member_name = (notice.first_name + " " + notice.last_name).strip()
+    member_name = f"{notice.first_name} {notice.last_name}{' '+notice.suffix if notice.suffix else ''}".strip()
     expiration = notice.expiration.strftime("%B %d, %Y") if notice.expiration else "soon"
     subject = f"Pack 500 renewal reminder for {member_name or 'your family'}"
     body = (
@@ -449,9 +498,19 @@ def main() -> None:
     logging.info("Running renewal notices as of %s", as_of.isoformat())
 
     nonrenewed_df = load_non_renewed(args.non_renewed, args.encoding)
+    previously_contacted_ids: set[str] = set()
+    if args.previous_non_renewed:
+        previous_df = load_non_renewed(args.previous_non_renewed, args.encoding)
+        prev_ids = previous_df["memberid"].astype(str).str.strip()
+        previously_contacted_ids = {member_id for member_id in prev_ids if member_id}
+        logging.info(
+            "Loaded %s previously contacted member IDs from %s",
+            len(previously_contacted_ids),
+            args.previous_non_renewed,
+        )
     roster_df = load_roster(args.roster, args.encoding)
 
-    lapsed = build_lapsed_notices(nonrenewed_df)
+    lapsed = build_lapsed_notices(nonrenewed_df, skip_member_ids=previously_contacted_ids)
     expiring = build_renewal_notices(
         roster_df,
         as_of=as_of,

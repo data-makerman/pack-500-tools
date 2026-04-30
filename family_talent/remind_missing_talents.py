@@ -1,21 +1,7 @@
-"""Identify adults missing the Family Talent survey and optionally email reminders.
-DETAILS:
-Read Family Talent data, merge with Pack adult roster, and identify missing talents.
-Then, if CLI option provided to --send-mails, send reminder emails to adults missing talent survey entries.
+"""Identify adults missing the Family Talent survey and optionally send reminders.
 
-If an adult is already a den leader or den admin (listed in the roster CSV), thank them for their service, but
-still ask them to complete a talent survey so that we know their interests and skills for other volunteer opportunities.
-
-If they are NOT a recorded leader, include a gentle encouragement to find one role that they can fill to help the Pack this year.
-Specifically, right now we need:
-* Pinewood Derby Trackmaster - lead volunteers in building the track on January 23rd during the day
-* Pinewood Derby Decormaster - lead volunteers in decorating the venue on January 23rd during the day
-* Pinewood Derby Check-in Assistants - help check in Scouts and their cars on January 23rd evening
-* Blue and Gold Patrol - work with Event Coordinator Cassie and company to plan and execute the Blue and Gold Banquet on March 21st
-* Graduation Picnic Grubbers - help plan and execute the end-of-year picnic, likely at Joyner Park, on May 9th
-The family talent survey is at pack500.org/talent, my email is cubmaster@pack500.org.
-
-Also provide a mechanism to stage these emails to michaeljohnakerman@gmail.com to review. See member_notices/notify_renewals_and_lapses.py for a template.
+This script compares the Family Talent form export with the Pack adult roster,
+produces an optional cleanup CSV, and can either print or send reminder emails.
 """
 
 from __future__ import annotations
@@ -47,7 +33,10 @@ except ModuleNotFoundError:  # pragma: no cover - allow running without Google l
 
 
 GMAIL_SCOPES = ["https://www.googleapis.com/auth/gmail.send"]
-EMAIL_SIGNATURE = "~Cubmaster Michael Akerman\nCub Scout Pack 500, Scouting America"
+DEFAULT_FROM_NAME = "Pack 500 Cubmaster"
+DEFAULT_FROM_EMAIL = "cubmaster@pack500.org"
+DEFAULT_PREVIEW_RECIPIENT = DEFAULT_FROM_EMAIL
+EMAIL_SIGNATURE = f"~{DEFAULT_FROM_NAME}\nCub Scout Pack 500, Scouting America"
 EMAIL_POLICY = policy.default.clone(max_line_length=1000)
 VOLUNTEER_NEEDS = [
     "Pinewood Derby Trackmaster - with help from your Cubmaster, lead volunteers in building the track on January 23rd during the day",
@@ -66,6 +55,7 @@ class AdultRecord:
     email: Optional[str]
     positions: str
     is_den_leader: bool
+    has_role: bool = False
 
 
 @dataclass
@@ -123,21 +113,22 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--from-name",
-        default="Cubmaster Michael Akerman",
+        default=DEFAULT_FROM_NAME,
         help="Display name to use in the From header.",
     )
     parser.add_argument(
         "--from-email",
-        default="cubmaster@pack500.org",
+        default=DEFAULT_FROM_EMAIL,
         help="Email address that owns the Gmail credential.",
     )
     parser.add_argument(
         "--reply-to",
+        default=DEFAULT_FROM_EMAIL,
         help="Optional Reply-To header value.",
     )
     parser.add_argument(
         "--preview-recipient",
-        default="michaeljohnakerman@gmail.com",
+        default=DEFAULT_PREVIEW_RECIPIENT,
         help="Address that receives proofs when --send-to-adults is not set.",
     )
     parser.add_argument(
@@ -304,6 +295,7 @@ def load_missing_export(path: Path) -> List[AdultRecord]:
         last = normalize_text(row.get("last_name"))
         email = normalize_email(row.get("email"))
         positions = normalize_text(row.get("positions"))
+        has_role = parse_bool(row.get("has_role"))
         if not (first or last or email):
             continue
         leader_value = row.get("is_den_leader")
@@ -315,6 +307,7 @@ def load_missing_export(path: Path) -> List[AdultRecord]:
                 email=email,
                 positions=positions,
                 is_den_leader=is_leader,
+                has_role=has_role,
             )
         )
     return records
@@ -333,21 +326,20 @@ def render_email(record: AdultRecord) -> EmailJob:
         "We are refreshing the Pack 500 family talent roster so we can match every adult with the right volunteer opportunities."
     )
     lines.append(
-        "We are still missing your family's entry, so I'm reaching out personally to learn more about your interests and skills."
+        "We are still missing your entry, so I'm reaching out personally to learn more about your interests and skills. "
+        "Would you take three minutes today to complete the survey at https://pack500.org/talent? "
+        "If you already submitted your survey this program year, thank you! Please reply so we can make sure "
+        "we correctly matched the response to your registered email."
     )
     if record.has_role:
-        has_role = bool(record.positions)
-    if has_role:
         lines.append(
-            "I know you are already serving in a Pack leadership role—thank you for the time and energy you are giving our Scouts. "
+            "I know you are already serving in a Pack leadership role. Thank you for the time and energy you are giving our Scouts. "
             "I'm not looking to load more onto your plate; the talent survey simply helps me understand what kinds of projects feel like a natural fit "
             "when you do have bandwidth or want to explore something new."
         )
     else:
         lines.append(
-            "My roster indicates you have not yet picked a role in our Pack this year. If I've missed something, please let me know so I can fix it."
-        )
-        lines.append(
+            "My roster also indicates you have not yet found a volunteer role to suit you in our Pack this year. "
             "Every job that keeps Pack 500 running is handled by a Scout's parent, guardian, or family member, and we understand that not every role suits every person. "
             "I'd love to match you with something that fits your interests and your schedule."
         )
@@ -356,15 +348,8 @@ def render_email(record: AdultRecord) -> EmailJob:
         lines.append(
             "If any of those resonate or if you have another idea for something you'd love to help with, please hit reply so we can talk."
         )
-        lines.append(volunteer_needs_text())
-        lines.append(
-            "If any of those sound like a fit for you, or if you have other ideas about how you can help, please let me know! ")
     lines.append(
-        "Would you take three minutes today to complete the survey at https://pack500.org/talent?"
-    )
-    lines.append(
-        "If you already submitted it this program year, thank you! Please reply so we can make sure "
-        "we correctly matched the response to your registered email."
+        "Thank you for being part of Pack 500!"
     )
     lines.append(EMAIL_SIGNATURE)
     body = "\n\n".join(lines).strip() + "\n"

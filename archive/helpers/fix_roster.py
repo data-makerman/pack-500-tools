@@ -1,9 +1,15 @@
-#%%
+"""Normalize a raw Scoutbook roster export with shifted guardian rows.
+
+This is a one-off helper retained for manual recovery of malformed roster
+exports. The main progress report workflow now normalizes raw roster exports
+inside progress_reports/create_progress_reports.py.
+"""
+
 from pathlib import Path
 
 import pandas as pd
 
-INPUT_PATH = Path("progress_reports/2026-01/RosterReport_Pack0500_Scouts_parents_20260103.csv")
+INPUT_PATH = Path("progress_reports/2026-03/RosterReport_Pack0500")
 OUTPUT_PATH = Path("roster_20260103_fixed.csv")
 
 df = pd.read_csv(INPUT_PATH, header=1, encoding="latin-1")
@@ -52,4 +58,3 @@ df["Den"] = df["Den"].ffill()
 df["ID"] = df["ID"].ffill()
 
 df.to_csv(OUTPUT_PATH, index=False)
-#%%

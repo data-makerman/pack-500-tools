@@ -1,4 +1,9 @@
-#%%
+"""Transform a dated Wolf awards status sheet into printable award lists.
+
+This historical helper is retained for reference when rebuilding similar
+recognition packets from spreadsheet exports.
+"""
+
 import random
 import pandas as pd
 
@@ -40,4 +45,3 @@ with open("Awards.html", "w") as f:
         f.write(f"<div style='flex: 1; min-width: 300px; page-break-inside: avoid;'>\n<h2>{award}</h2><h3>Scouts:</h3><ul>{"\n".join(f"<li>{scout}</li>" for scout in scouts)}</ul></div>")
     f.write("</div>\n")
     f.write("</body>\n</html>")
-# %%

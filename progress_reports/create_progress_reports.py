@@ -71,6 +71,9 @@ CANONICAL_RANK_NAMES = {
 RANK_ELECTIVE_REQUIREMENT = 2
 POPULAR_THRESHOLD = 0.5
 GMAIL_SCOPES = ["https://www.googleapis.com/auth/gmail.send"]
+DEFAULT_FROM_NAME = "Pack 500 Cubmaster"
+DEFAULT_FROM_EMAIL = "cubmaster@pack500.org"
+DEFAULT_PREVIEW_RECIPIENT = DEFAULT_FROM_EMAIL
 
 AdventureRequirement = Dict[str, str]
 AdventureRecord = Dict[str, Any]
@@ -164,15 +167,14 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--roster",
-        default=Path("progress_reports/2026-01/roster_20260103_fixed.csv"),
+        default=Path("progress_reports/2026-01/RosterReport_Pack0500_Scouts_parents_20260103.csv"),
         type=Path,
-        help="Path to the cleaned roster export with guardian contact info.",
+        help="Path to the raw RosterReport export; guardian rows are normalized automatically.",
     )
     parser.add_argument(
         "--reports-dir",
-        default=Path("progress_reports/2026-01/reports"),
         type=Path,
-        help="Directory where per-scout HTML reports will be written.",
+        help="Directory where per-scout HTML reports will be written. Defaults to a reports subdirectory under --input.",
     )
     parser.add_argument(
         "--adventure-json",
@@ -219,22 +221,22 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--from-email",
-        default="cubmaster@pack500.org",
+        default=DEFAULT_FROM_EMAIL,
         help="Email address to use in the From header (must match an authorized alias).",
     )
     parser.add_argument(
         "--from-name",
-        default="Cubmaster Michael Akerman",
+        default=DEFAULT_FROM_NAME,
         help="Display name to pair with the From email address.",
     )
     parser.add_argument(
         "--reply-to",
-        default="cubmaster@pack500.org",
+        default=DEFAULT_FROM_EMAIL,
         help="Reply-To header value for outbound messages.",
     )
     parser.add_argument(
         "--preview-recipient",
-        default="michaeljohnakerman@gmail.com",
+        default=DEFAULT_PREVIEW_RECIPIENT,
         help="Override actual parent recipients and send every email to this address for proofing. Provide an empty string to disable.",
     )
     parser.add_argument(
@@ -699,8 +701,101 @@ def load_files(input_path: Path, pattern: str) -> List[Path]:
     return sorted(input_path.glob(pattern))
 
 
+def has_aol_export(files: Iterable[Path]) -> bool:
+    return any(normalize_label(guess_rank_name(path)) == "arrowoflight" for path in files)
+
+
+def resolve_reports_dir(input_path: Path, reports_dir: Optional[Path]) -> Path:
+    if reports_dir is not None:
+        return Path(reports_dir)
+    base_dir = input_path.parent if input_path.is_file() else input_path
+    return base_dir / "reports"
+
+
+def clean_roster_report(path: Path, encoding: str) -> pd.DataFrame:
+    df = pd.read_csv(path, header=0, skiprows=1, encoding=encoding)
+    rename_map = {
+        " ": "ID",
+        "Unnamed: 7": "Address 2",
+        "Unnamed: 8": "Address 2",
+        "Unnamed: 12": "DropMe",
+        "Unnamed: 13": "DropMe",
+    }
+    df = df.rename(columns={key: value for key, value in rename_map.items() if key in df.columns})
+
+    required = [
+        "ID",
+        "Parent/Guardian Name ",
+        "Relationship",
+        "Address",
+        "Den",
+        "Home Phone",
+        "Work Phone",
+        "Mobile Phone",
+        "Email",
+        "Address 2",
+        "First Name",
+        "Last Name",
+    ]
+    missing = [column for column in required if column not in df.columns]
+    if missing:
+        raise ValueError(f"Roster report missing columns: {', '.join(missing)}")
+
+    mask_missing_id = df["ID"].isna()
+    if mask_missing_id.any():
+        shift_source = df.copy(deep=True)
+        suffix_names = shift_source.loc[mask_missing_id, "Suffix"].astype(str).str.strip()
+        has_suffix_name = suffix_names.astype(bool)
+        df.loc[mask_missing_id & has_suffix_name, "Parent/Guardian Name "] = suffix_names[has_suffix_name]
+        df.loc[mask_missing_id & ~has_suffix_name, "Parent/Guardian Name "] = shift_source.loc[mask_missing_id & ~has_suffix_name, "Den"]
+        df.loc[mask_missing_id, "Relationship"] = shift_source.loc[mask_missing_id, "Den"]
+        df.loc[mask_missing_id, "Address"] = shift_source.loc[mask_missing_id, "Relationship"]
+        df.loc[mask_missing_id, "Den"] = None
+
+        df.loc[mask_missing_id, "Home Phone"] = shift_source.loc[mask_missing_id, "Address"]
+        df.loc[mask_missing_id, "Work Phone"] = shift_source.loc[mask_missing_id, "Home Phone"]
+        df.loc[mask_missing_id, "Mobile Phone"] = shift_source.loc[mask_missing_id, "Work Phone"]
+
+        email_columns = [
+            "Email",
+            "Mobile Phone",
+            "Work Phone",
+            "Home Phone",
+            "Address 2",
+            "Address",
+        ]
+        for idx in df.index[mask_missing_id]:
+            email_value: Optional[str] = None
+            for column in email_columns:
+                if column not in shift_source.columns:
+                    continue
+                raw_value = shift_source.at[idx, column]
+                if not isinstance(raw_value, str):
+                    continue
+                candidate = raw_value.strip()
+                if "@" in candidate:
+                    email_value = candidate
+                    break
+            if email_value:
+                df.at[idx, "Email"] = email_value
+        df.loc[mask_missing_id, "Address 2"] = None
+
+    if "DropMe" in df.columns:
+        df = df.drop(columns=["DropMe"])
+
+    for column in ["First Name", "Last Name", "Den", "ID"]:
+        if column in df.columns:
+            df[column] = df[column].ffill()
+
+    return df
+
+
 def load_roster(path: Path, encoding: str) -> pd.DataFrame:
-    roster_df = pd.read_csv(path, dtype=str, encoding=encoding).fillna("")
+    try:
+        roster_df = clean_roster_report(path, encoding)
+    except (KeyError, ValueError, pd.errors.ParserError):
+        roster_df = pd.read_csv(path, dtype=str, encoding=encoding)
+    roster_df = roster_df.fillna("")
     roster_df = roster_df.rename(
         columns=lambda c: c.strip().lower().replace(" ", "_").replace("/", "_")
     )
@@ -804,6 +899,7 @@ def generate_reports(
     report_date: dt.date,
     adventures: AdventureCatalog,
     *,
+    from_name: str = DEFAULT_FROM_NAME,
     email_sender: Optional[SummaryEmailSender] = None,
 ) -> None:
     reports_dir = Path(reports_dir)
@@ -902,6 +998,7 @@ def generate_reports(
                 scout_rank=scout_rank,
                 parent_name=parent_name,
                 report_date=as_of_display,
+                from_name=from_name,
                 rank_pct=rank_pct,
                 rank_complete=rank_complete,
                 required_remaining=required_remaining,
@@ -937,6 +1034,7 @@ def render_summary_html(
     scout_rank: str,
     parent_name: str,
     report_date: str,
+    from_name: str,
     rank_pct: float,
     rank_complete: bool,
     required_remaining: List[str],
@@ -952,6 +1050,11 @@ def render_summary_html(
     peer_completion: Dict[Tuple[str, str], float],
     detail_sections_html: str,
 ) -> str:
+    scout_display_name = repair_mojibake(scout_name)
+    parent_display_name = repair_mojibake(parent_name)
+    sender_display_name = repair_mojibake(from_name)
+    parent_line = html.escape(parent_display_name or "Parent/Guardian")
+    scout_name_html = html.escape(scout_display_name)
     rank_progress = format_percent(rank_pct)
     required_rows: List[str] = []
     for item in required_remaining:
@@ -969,7 +1072,7 @@ def render_summary_html(
     rank_message = (
         f"Congratulations on earning your {html.escape(scout_rank)}!"
         if rank_complete
-        else f"Keep going—we're cheering you on to earn your {html.escape(scout_rank)}!"
+        else f"Let us know if we're missing any completed items for your {html.escape(scout_rank)}!"
     )
     rank_card = f"""
         <article class="summary-card {rank_card_class}">
@@ -1038,8 +1141,17 @@ def render_summary_html(
 {missed_card}
     </section>
     """
-    parent_line = html.escape(parent_name or "Parent/Guardian")
     adventure_url = f"https://www.scouting.org/programs/cub-scouts/adventures/{adventure_link_slug}/"
+    is_aol = normalize_label(scout_rank) in {"aol", "arrowoflight"}
+    if is_aol:
+        closing_note_html = (
+            f"<p>Congratulations on everything {scout_name_html} has accomplished in Cub Scouts. "
+            "We can't wait to see everything they'll achieve after crossover next weekend!</p>"
+        )
+    else:
+        closing_note_html = (
+            f"<p>Thanks for supporting {scout_name_html}! Cub Scouting is a family program, so if you ever work toward Adventures at home, please let your den leaders know!</p>"
+        )
 
     detail_section = ""
     if detail_sections_html.strip():
@@ -1105,12 +1217,12 @@ def render_summary_html(
 </head>
 <body>
     <p>Hi {parent_line},</p>
-    <p>Happy New Year! This is your personalized Pack 500 progress report on <strong>{html.escape(scout_name)}</strong> as of {html.escape(report_date)}. This report reflects our records in Scoutbook, so please alert your Den Leaders if something seems off.</p>
+    <p>This is your end-of-year personalized Pack 500 progress report on <strong>{scout_name_html}</strong> as of {html.escape(report_date)}. This report reflects our records in Scoutbook, so please alert your Den Leaders if something seems off.</p>
     {summary_cards_html}
     <p>You can see your Scout's advancement records at <a href=\"https://advancements.scouting.org/\">advancements.scouting.org</a> and read the requirements at <a href=\"{adventure_url}\">scouting.org/programs/cub-scouts/adventures/{html.escape(adventure_link_slug)}</a>.</p>
-    <p>Thanks for supporting {html.escape(scout_name)}! Cub Scouting is a family program, so if you ever work toward Adventures at home, please let your den leaders know!</p>
+    {closing_note_html}
     <p>As always, feel free to reach out with any questions, comments, or concerns about your Scout, your den, or our pack.</p>
-    <p>~Cubmaster Michael Akerman</p>
+    <p>~{html.escape(sender_display_name or DEFAULT_FROM_NAME)}</p>
 {detail_section}
 </body>
 </html>
@@ -1252,11 +1364,15 @@ def send_progress_emails(*_: object, **__: object) -> None:
 
 def main() -> None:
     args = parse_args()
-    files = load_files(Path(args.input_dir), args.pattern)
+    input_path = Path(args.input_dir)
+    reports_dir = resolve_reports_dir(input_path, args.reports_dir)
+    files = load_files(input_path, args.pattern)
     if not files:
         raise FileNotFoundError(
             f"No files matching pattern '{args.pattern}' found under {args.input_dir}."
         )
+    if not has_aol_export(files):
+        print(f"No AOL progress export found under {args.input_dir}; continuing without AOL reports.")
 
     all_records: List[Dict[str, object]] = []
     for file_path in files:
@@ -1306,12 +1422,13 @@ def main() -> None:
             )
         generate_reports(
             df,
-            Path(args.reports_dir),
+            reports_dir,
             report_date,
             adventure_catalog,
+            from_name=args.from_name,
             email_sender=email_sender,
         )
-        print(f"Summary HTML reports written to {args.reports_dir}")
+        print(f"Summary HTML reports written to {reports_dir}")
 
 
 if __name__ == "__main__":

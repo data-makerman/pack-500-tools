@@ -52,6 +52,7 @@ readable_column_rename_dict = {
     "comments": "Comments"
 }
 
+
 def build_html_message(rank, df):
     num_scouts = df[df[rank]].shape[0]
     # Food allergies contains some poor strings like "Na" and "none" which should mean NaN
@@ -116,6 +117,7 @@ Dear {rank} Leaders,
 {table.drop(columns=["timestamp"]+list(ranks)).rename(columns=readable_column_rename_dict).fillna("").to_html(index=False, justify="left", border=1, classes="table table-striped table-bordered", escape=False)}
     """
     return dedent(message)
+
 
 for rank in ranks:
     df_rank = df[df[rank]]

@@ -1,5 +1,8 @@
+"""Ad hoc HTML inspection helper used while maintaining adventure scraping logic."""
+
 import requests
 from bs4 import BeautifulSoup
+
 
 def dump_adventure_structure(rank_slug: str = "lion") -> None:
     url = f"https://www.scouting.org/programs/cub-scouts/adventures/{rank_slug}/"
