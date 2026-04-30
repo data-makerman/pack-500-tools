@@ -174,16 +174,6 @@ def parse_args(argv: Optional[List[str]] = None) -> argparse.Namespace:
         dest="slugs",
         help="Restrict scraping to specific adventure slugs (repeatable)",
     )
-    parser.add_argument(
-        "--pretty",
-        action="store_true",
-        help="Pretty-print JSON output",
-    )
-    parser.add_argument(
-        "--quiet",
-        action="store_true",
-        help="Suppress progress logs",
-    )
     return parser.parse_args(argv)
 
 
@@ -192,8 +182,7 @@ def main(argv: Optional[List[str]] = None) -> int:
     session = create_session()
 
     def log(message: str) -> None:
-        if not args.quiet:
-            print(message, file=sys.stderr)
+        print(message, file=sys.stderr)
 
     log("Loading rank metadata...")
     rank_map = fetch_rank_metadata(session)
@@ -215,7 +204,7 @@ def main(argv: Optional[List[str]] = None) -> int:
     payload = build_payload(scraped)
     serialized = json.dumps(
         payload,
-        indent=2 if args.pretty else None,
+        indent=2,
         ensure_ascii=False,
     )
     args.output.write_text(serialized + "\n", encoding="utf-8")

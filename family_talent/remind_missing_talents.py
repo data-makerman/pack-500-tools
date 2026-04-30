@@ -17,10 +17,9 @@ from email.utils import formataddr
 from pathlib import Path
 from typing import List, Optional, Sequence, Set
 
-from numpy import record
 import pandas as pd
 
-try:  # Optional Gmail dependencies, only required when --send-mails is provided
+try:  # Optional Gmail dependencies, only required when --send-email is provided
     from google.auth.transport.requests import Request
     from google.oauth2.credentials import Credentials
     from google_auth_oauthlib.flow import InstalledAppFlow
@@ -36,6 +35,9 @@ GMAIL_SCOPES = ["https://www.googleapis.com/auth/gmail.send"]
 DEFAULT_FROM_NAME = "Pack 500 Cubmaster"
 DEFAULT_FROM_EMAIL = "cubmaster@pack500.org"
 DEFAULT_PREVIEW_RECIPIENT = DEFAULT_FROM_EMAIL
+DEFAULT_INPUT_ENCODING = "utf-8-sig"
+DEFAULT_GMAIL_CLIENT_SECRET = Path("gmail_client_secret.json")
+DEFAULT_GMAIL_TOKEN = Path("gmail_token.json")
 EMAIL_SIGNATURE = f"~{DEFAULT_FROM_NAME}\nCub Scout Pack 500, Scouting America"
 EMAIL_POLICY = policy.default.clone(max_line_length=1000)
 VOLUNTEER_NEEDS = [
@@ -85,31 +87,11 @@ def parse_args() -> argparse.Namespace:
         help="Path to the Pack 500 adult roster CSV.",
     )
     parser.add_argument(
-        "--survey-encoding",
-        default="utf-8-sig",
-        help="Encoding for the talent survey CSV (default: utf-8-sig).",
-    )
-    parser.add_argument(
-        "--roster-encoding",
-        default="utf-8-sig",
-        help="Encoding for the adult roster CSV (default: utf-8-sig).",
-    )
-    parser.add_argument(
+        "--send-email",
         "--send-mails",
+        dest="send_email",
         action="store_true",
         help="Send reminders via the Gmail API instead of printing previews.",
-    )
-    parser.add_argument(
-        "--gmail-client-secret",
-        type=Path,
-        default=Path("gmail_client_secret.json"),
-        help="Path to the Gmail OAuth client secret JSON file.",
-    )
-    parser.add_argument(
-        "--gmail-token",
-        type=Path,
-        default=Path("gmail_token.json"),
-        help="Path to store the Gmail OAuth token.",
     )
     parser.add_argument(
         "--from-name",
@@ -120,11 +102,6 @@ def parse_args() -> argparse.Namespace:
         "--from-email",
         default=DEFAULT_FROM_EMAIL,
         help="Email address that owns the Gmail credential.",
-    )
-    parser.add_argument(
-        "--reply-to",
-        default=DEFAULT_FROM_EMAIL,
-        help="Optional Reply-To header value.",
     )
     parser.add_argument(
         "--preview-recipient",
@@ -401,7 +378,6 @@ class ReminderEmailSender:
         service,
         from_name: str,
         from_email: str,
-        reply_to: Optional[str],
         preview_recipient: Optional[str],
         send_to_adults: bool,
         max_emails: Optional[int],
@@ -409,7 +385,6 @@ class ReminderEmailSender:
         self.service = service
         self.from_name = from_name
         self.from_email = from_email
-        self.reply_to = reply_to
         self.preview_recipient = preview_recipient
         self.send_to_adults = send_to_adults
         self.max_emails = max_emails
@@ -436,8 +411,6 @@ class ReminderEmailSender:
         message = EmailMessage(policy=EMAIL_POLICY)
         message["To"] = target
         message["From"] = formataddr((self.from_name, self.from_email))
-        if self.reply_to:
-            message["Reply-To"] = self.reply_to
         message["Subject"] = subject
         message.set_content(job.body)
         message.add_alternative(to_html_paragraphs(job.body), subtype="html")
@@ -495,8 +468,8 @@ def main() -> None:
             args.use_missing,
         )
     else:
-        talent_df = load_talent_survey(args.talent_survey, args.survey_encoding)
-        roster_df = load_adult_roster(args.adult_roster, args.roster_encoding)
+        talent_df = load_talent_survey(args.talent_survey, DEFAULT_INPUT_ENCODING)
+        roster_df = load_adult_roster(args.adult_roster, DEFAULT_INPUT_ENCODING)
 
         response_keys = build_response_keys(talent_df)
         missing_records = missing_talent_records(roster_df, response_keys)
@@ -516,13 +489,12 @@ def main() -> None:
         return
 
     sender: Optional[ReminderEmailSender] = None
-    if args.send_mails:
-        service = build_gmail_service(args.gmail_client_secret, args.gmail_token)
+    if args.send_email:
+        service = build_gmail_service(DEFAULT_GMAIL_CLIENT_SECRET, DEFAULT_GMAIL_TOKEN)
         sender = ReminderEmailSender(
             service=service,
             from_name=args.from_name,
             from_email=args.from_email,
-            reply_to=args.reply_to,
             preview_recipient=args.preview_recipient,
             send_to_adults=args.send_to_adults,
             max_emails=args.max_emails,

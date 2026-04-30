@@ -34,6 +34,9 @@ except ModuleNotFoundError:  # pragma: no cover - allow running without Google l
 DEFAULT_FROM_NAME = "Pack 500 Cubmaster"
 DEFAULT_FROM_EMAIL = "cubmaster@pack500.org"
 DEFAULT_PREVIEW_RECIPIENT = DEFAULT_FROM_EMAIL
+DEFAULT_INPUT_ENCODING = "latin-1"
+DEFAULT_GMAIL_CLIENT_SECRET = Path("gmail_client_secret.json")
+DEFAULT_GMAIL_TOKEN = Path("gmail_token.json")
 GMAIL_SCOPES = ["https://www.googleapis.com/auth/gmail.send"]
 EMAIL_SIGNATURE = (
     f"~{DEFAULT_FROM_NAME}\n"
@@ -82,11 +85,10 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--previous-non-renewed",
-        required=True,
         type=previous_report_arg,
         help=(
-            "Non Renewed Membership report from an earlier run. Members appearing in both reports are "
-            "skipped so they only receive the lapsed notice once. Use 'None' if there is no earlier report."
+            "Optional earlier Non Renewed Membership report. When omitted, the script uses the latest earlier "
+            "dated report under member_notices/ if one exists. Use 'None' to force no previous report."
         ),
     )
     parser.add_argument(
@@ -94,11 +96,6 @@ def parse_args() -> argparse.Namespace:
         default=Path("member_notices/2026-01/Roster_Report.csv"),
         type=Path,
         help="Path to the current roster report CSV.",
-    )
-    parser.add_argument(
-        "--encoding",
-        default="latin-1",
-        help="Encoding used by the exported CSV files (default: latin-1).",
     )
     parser.add_argument(
         "--as-of",
@@ -116,18 +113,6 @@ def parse_args() -> argparse.Namespace:
         help="Send messages via the Gmail API instead of printing previews to stdout.",
     )
     parser.add_argument(
-        "--gmail-client-secret",
-        type=Path,
-        default=Path("gmail_client_secret.json"),
-        help="Path to the Gmail OAuth client secret JSON file.",
-    )
-    parser.add_argument(
-        "--gmail-token",
-        type=Path,
-        default=Path("gmail_token.json"),
-        help="Path to store the Gmail OAuth token.",
-    )
-    parser.add_argument(
         "--from-name",
         default=DEFAULT_FROM_NAME,
         help="Display name to use in the From header.",
@@ -136,10 +121,6 @@ def parse_args() -> argparse.Namespace:
         "--from-email",
         default=DEFAULT_FROM_EMAIL,
         help="Email address that owns the Gmail credential.",
-    )
-    parser.add_argument(
-        "--reply-to",
-        help="Optional Reply-To header value.",
     )
     parser.add_argument(
         "--preview-recipient",
@@ -246,6 +227,26 @@ def clean_text(value: object) -> str:
     return text
 
 
+def resolve_previous_non_renewed(
+    non_renewed_path: Path,
+    explicit_previous: Optional[Path],
+) -> Optional[Path]:
+    if explicit_previous is not None:
+        return explicit_previous
+    history_dir = non_renewed_path.parent.parent
+    current_period = non_renewed_path.parent.name
+    candidates = [
+        path
+        for path in sorted(history_dir.glob("*/NonRenewedMembership.csv"))
+        if path != non_renewed_path and path.parent.name < current_period
+    ]
+    if not candidates:
+        return None
+    chosen = candidates[-1]
+    logging.info("Using prior Non Renewed Membership report at %s", chosen)
+    return chosen
+
+
 def build_lapsed_notices(
     nonrenewed_df: pd.DataFrame,
     *,
@@ -324,7 +325,7 @@ def build_renewal_notices(
     return notices
 
 
-def render_lapsed_email(notice: RenewalNotice, *, as_of: dt.date) -> EmailJob:
+def render_lapsed_email(notice: RenewalNotice) -> EmailJob:
     member_name = f"{notice.first_name} {notice.last_name}{' '+notice.suffix if notice.suffix else ''}".strip()
     date_text = notice.expiration.strftime("%B %d, %Y") if notice.expiration else "earlier this year"
     subject = f"Pack 500 membership courtesy notice for {member_name or 'your family'}"
@@ -343,7 +344,7 @@ def render_lapsed_email(notice: RenewalNotice, *, as_of: dt.date) -> EmailJob:
     return EmailJob(notice=notice, subject=subject, body=body)
 
 
-def render_renewal_email(notice: RenewalNotice, *, as_of: dt.date) -> EmailJob:
+def render_renewal_email(notice: RenewalNotice) -> EmailJob:
     member_name = f"{notice.first_name} {notice.last_name}{' '+notice.suffix if notice.suffix else ''}".strip()
     expiration = notice.expiration.strftime("%B %d, %Y") if notice.expiration else "soon"
     subject = f"Pack 500 renewal reminder for {member_name or 'your family'}"
@@ -363,13 +364,12 @@ def build_email_jobs(
     *,
     lapsed: List[RenewalNotice],
     expiring: List[RenewalNotice],
-    as_of: dt.date,
 ) -> List[EmailJob]:
     jobs: List[EmailJob] = []
     for notice in lapsed:
-        jobs.append(render_lapsed_email(notice, as_of=as_of))
+        jobs.append(render_lapsed_email(notice))
     for notice in expiring:
-        jobs.append(render_renewal_email(notice, as_of=as_of))
+        jobs.append(render_renewal_email(notice))
     return jobs
 
 
@@ -418,7 +418,6 @@ class SummaryEmailSender:
         service,
         from_name: str,
         from_email: str,
-        reply_to: Optional[str],
         preview_recipient: Optional[str],
         send_to_members: bool,
         max_emails: Optional[int],
@@ -426,7 +425,6 @@ class SummaryEmailSender:
         self.service = service
         self.from_name = from_name
         self.from_email = from_email
-        self.reply_to = reply_to
         self.preview_recipient = preview_recipient
         self.send_to_members = send_to_members
         self.max_emails = max_emails
@@ -454,8 +452,6 @@ class SummaryEmailSender:
         message = EmailMessage(policy=EMAIL_POLICY)
         message["To"] = target
         message["From"] = formataddr((self.from_name, self.from_email))
-        if self.reply_to:
-            message["Reply-To"] = self.reply_to
         message["Subject"] = subject
         message.set_content(job.body)
         message.add_alternative(to_html_paragraphs(job.body), subtype="html")
@@ -497,18 +493,19 @@ def main() -> None:
         as_of = dt.datetime.strptime(args.as_of, "%Y-%m-%d").date()
     logging.info("Running renewal notices as of %s", as_of.isoformat())
 
-    nonrenewed_df = load_non_renewed(args.non_renewed, args.encoding)
+    nonrenewed_df = load_non_renewed(args.non_renewed, DEFAULT_INPUT_ENCODING)
     previously_contacted_ids: set[str] = set()
-    if args.previous_non_renewed:
-        previous_df = load_non_renewed(args.previous_non_renewed, args.encoding)
+    previous_non_renewed = resolve_previous_non_renewed(args.non_renewed, args.previous_non_renewed)
+    if previous_non_renewed:
+        previous_df = load_non_renewed(previous_non_renewed, DEFAULT_INPUT_ENCODING)
         prev_ids = previous_df["memberid"].astype(str).str.strip()
         previously_contacted_ids = {member_id for member_id in prev_ids if member_id}
         logging.info(
             "Loaded %s previously contacted member IDs from %s",
             len(previously_contacted_ids),
-            args.previous_non_renewed,
+            previous_non_renewed,
         )
-    roster_df = load_roster(args.roster, args.encoding)
+    roster_df = load_roster(args.roster, DEFAULT_INPUT_ENCODING)
 
     lapsed = build_lapsed_notices(nonrenewed_df, skip_member_ids=previously_contacted_ids)
     expiring = build_renewal_notices(
@@ -518,7 +515,7 @@ def main() -> None:
         skip_member_ids=[notice.member_id for notice in lapsed],
     )
 
-    jobs = build_email_jobs(lapsed=lapsed, expiring=expiring, as_of=as_of)
+    jobs = build_email_jobs(lapsed=lapsed, expiring=expiring)
 
     if not jobs:
         logging.info("No renewal notices to generate.")
@@ -526,12 +523,11 @@ def main() -> None:
 
     sender: Optional[SummaryEmailSender] = None
     if args.send_email:
-        service = build_gmail_service(args.gmail_client_secret, args.gmail_token)
+        service = build_gmail_service(DEFAULT_GMAIL_CLIENT_SECRET, DEFAULT_GMAIL_TOKEN)
         sender = SummaryEmailSender(
             service=service,
             from_name=args.from_name,
             from_email=args.from_email,
-            reply_to=args.reply_to,
             preview_recipient=args.preview_recipient,
             send_to_members=args.send_to_members,
             max_emails=args.max_emails,

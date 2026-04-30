@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import argparse
 import csv
-from collections import defaultdict, OrderedDict
+from collections import OrderedDict
 from pathlib import Path
 
 ADVENTURE_TARGETS = OrderedDict(

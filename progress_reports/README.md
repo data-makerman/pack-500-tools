@@ -29,23 +29,28 @@ The script can now normalize the raw Scouts' Parents roster export directly, so 
 ```powershell
 F:/Scouts/.venv/Scripts/python.exe progress_reports/create_progress_reports.py \
   --input progress_reports/2026-03 \
-  --roster progress_reports/2026-03/RosterReport_Pack0500_Scouts_parents_20260315.csv \
-  --output progress_reports/2026-03/progress_report_aggregate.csv \
-  --reports-dir progress_reports/2026-03/reports \
   --report-date 2026-03-15
 ```
 
+If the dated folder contains exactly one matching `RosterReport_*Scouts_parents*.csv`, the script will pick it automatically. It also now defaults the outputs to:
+
+- `progress_reports/2026-03/progress_report_aggregate.csv`
+- `progress_reports/2026-03/reports/`
+
+Use `--roster` only when the folder contains multiple roster exports or the roster lives elsewhere.
+
 ## Safe sending workflow
 
-- By default, generated HTML files are written to `--reports-dir` and no email is sent.
+- By default, generated HTML files are written to the dated folder's `reports/` subdirectory and no email is sent.
 - Add `--send-email` only after you have local Gmail OAuth credentials available.
 - Without `--send-to-parents`, messages go to the preview recipient so you can proof them first.
 - Add `--send-to-parents` only when you are ready for live delivery.
 - Use `--max-emails` for a small proof batch before a full send.
+- The script expects the repo-standard Gmail credential filenames: `gmail_client_secret.json` and `gmail_token.json`.
 
 ## Outputs
 
-- `--output`: normalized aggregate CSV with one record per advancement item.
-- `--reports-dir`: one HTML report per Scout and parent pairing.
+- `--output`: optional override for the normalized aggregate CSV. By default it lands beside the source exports.
+- `reports/`: one HTML report per Scout and parent pairing, written under the input folder.
 
 If the script raises a mismatch about missing requirement rows, treat that as a data-quality warning from the underlying Scoutbook export and rerun the rank report after rechecking the filters.

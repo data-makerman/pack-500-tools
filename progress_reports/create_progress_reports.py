@@ -40,6 +40,11 @@ REQUIREMENT_REQ_HASH_RE = re.compile(
 REQUIREMENT_PREFIX_ONLY_RE = re.compile(r"^\s*req(?:uirement)?\s*#?\s*$", re.IGNORECASE)
 REQUIREMENT_CODE_TOKEN_RE = re.compile(r"(\d+[a-z]?)", re.IGNORECASE)
 DEFAULT_PATTERN = "ReportBuilder_Pack0500_Adventures_*__*.csv"
+DEFAULT_INPUT_ENCODING = "latin-1"
+DEFAULT_OUTPUT_NAME = "progress_report_aggregate.csv"
+DEFAULT_ADVENTURE_JSON = Path("adventure_requirements.json")
+DEFAULT_GMAIL_CLIENT_SECRET = Path("gmail_client_secret.json")
+DEFAULT_GMAIL_TOKEN = Path("gmail_token.json")
 SKIP_LABELS = {
     "subunit",
     "nextrank",
@@ -150,37 +155,14 @@ def parse_args() -> argparse.Namespace:
         help="Directory (or single CSV path) containing Scoutbook+ progress exports.",
     )
     parser.add_argument(
-        "--pattern",
-        default=DEFAULT_PATTERN,
-        help="Glob pattern used to discover per-rank CSVs inside --input-dir.",
-    )
-    parser.add_argument(
         "--output",
-        default=Path("progress_reports/progress_report_aggregate.csv"),
         type=Path,
-        help="Destination CSV for the tall/normalized dataset.",
-    )
-    parser.add_argument(
-        "--encoding",
-        default="latin-1",
-        help="File encoding for the incoming Scoutbook+ CSVs and roster.",
+        help="Destination CSV for the tall/normalized dataset. Defaults beside the input exports.",
     )
     parser.add_argument(
         "--roster",
-        default=Path("progress_reports/2026-01/RosterReport_Pack0500_Scouts_parents_20260103.csv"),
         type=Path,
-        help="Path to the raw RosterReport export; guardian rows are normalized automatically.",
-    )
-    parser.add_argument(
-        "--reports-dir",
-        type=Path,
-        help="Directory where per-scout HTML reports will be written. Defaults to a reports subdirectory under --input.",
-    )
-    parser.add_argument(
-        "--adventure-json",
-        default=Path("adventure_requirements.json"),
-        type=Path,
-        help="Path to the adventure_requirements.json dataset used for linking requirement text.",
+        help="Path to the raw Scouts' Parents roster export. Defaults to the matching roster file in --input.",
     )
     parser.add_argument(
         "--report-date",
@@ -192,32 +174,9 @@ def parse_args() -> argparse.Namespace:
         help="Only build the tall CSV and skip HTML generation.",
     )
     parser.add_argument(
-        "--edge-path",
-        type=Path,
-        help="(Deprecated) Retained for compatibility; ignored now that PDFs are removed.",
-    )
-    parser.add_argument(
-        "--pdf-timeout",
-        type=int,
-        default=60,
-        help="(Deprecated) Timeout value unused; PDFs are no longer generated.",
-    )
-    parser.add_argument(
         "--send-email",
         action="store_true",
         help="If set, send each summary email via the Gmail API after generating HTML.",
-    )
-    parser.add_argument(
-        "--gmail-client-secret",
-        type=Path,
-        default=Path("gmail_client_secret.json"),
-        help="Path to the Gmail OAuth client secret JSON file.",
-    )
-    parser.add_argument(
-        "--gmail-token",
-        type=Path,
-        default=Path("gmail_token.json"),
-        help="Path to store the Gmail OAuth token (created after first authorization).",
     )
     parser.add_argument(
         "--from-email",
@@ -228,11 +187,6 @@ def parse_args() -> argparse.Namespace:
         "--from-name",
         default=DEFAULT_FROM_NAME,
         help="Display name to pair with the From email address.",
-    )
-    parser.add_argument(
-        "--reply-to",
-        default=DEFAULT_FROM_EMAIL,
-        help="Reply-To header value for outbound messages.",
     )
     parser.add_argument(
         "--preview-recipient",
@@ -299,7 +253,7 @@ def build_gmail_service(client_secret_path: Path, token_path: Path):  # type: ig
     token_path = Path(token_path)
     if not client_secret_path.exists():
         raise FileNotFoundError(
-            f"Gmail OAuth client secret not found at {client_secret_path}. Provide --gmail-client-secret."
+            f"Gmail OAuth client secret not found at {client_secret_path}."
         )
     creds: Optional[Credentials] = None
     if token_path.exists():
@@ -324,14 +278,12 @@ class SummaryEmailSender:
         service,
         from_name: str,
         from_email: str,
-        reply_to: Optional[str],
         preview_recipient: Optional[str],
         max_emails: Optional[int],
     ) -> None:
         self.service = service
         self.from_name = from_name
         self.from_email = from_email
-        self.reply_to = reply_to
         self.preview_recipient = preview_recipient.strip() if preview_recipient else None
         self.max_emails = max_emails
         self.sent = 0
@@ -361,8 +313,6 @@ class SummaryEmailSender:
         message["Subject"] = subject
         message["From"] = formataddr((self.from_name, self.from_email))
         message["To"] = recipient
-        if self.reply_to:
-            message["Reply-To"] = self.reply_to
 
         text_fallback = (
             f"Hi {parent_name or 'family'},\n\n"
@@ -390,7 +340,6 @@ def build_summary_email_sender(
     token_path: Path,
     from_name: str,
     from_email: str,
-    reply_to: Optional[str],
     preview_recipient: Optional[str],
     max_emails: Optional[int],
 ) -> SummaryEmailSender:
@@ -399,7 +348,6 @@ def build_summary_email_sender(
         service=service,
         from_name=from_name,
         from_email=from_email,
-        reply_to=reply_to,
         preview_recipient=preview_recipient,
         max_emails=max_emails,
     )
@@ -695,21 +643,41 @@ def process_rank_file(path: Path, encoding: str) -> List[Dict[str, object]]:
     return records
 
 
-def load_files(input_path: Path, pattern: str) -> List[Path]:
+def load_files(input_path: Path) -> List[Path]:
     if input_path.is_file():
         return [input_path]
-    return sorted(input_path.glob(pattern))
+    return sorted(input_path.glob(DEFAULT_PATTERN))
 
 
 def has_aol_export(files: Iterable[Path]) -> bool:
     return any(normalize_label(guess_rank_name(path)) == "arrowoflight" for path in files)
 
 
-def resolve_reports_dir(input_path: Path, reports_dir: Optional[Path]) -> Path:
-    if reports_dir is not None:
-        return Path(reports_dir)
+def resolve_reports_dir(input_path: Path) -> Path:
     base_dir = input_path.parent if input_path.is_file() else input_path
     return base_dir / "reports"
+
+
+def resolve_output_path(input_path: Path, output_path: Optional[Path]) -> Path:
+    if output_path is not None:
+        return Path(output_path)
+    base_dir = input_path.parent if input_path.is_file() else input_path
+    return base_dir / DEFAULT_OUTPUT_NAME
+
+
+def resolve_roster_path(input_path: Path, roster_path: Optional[Path]) -> Path:
+    if roster_path is not None:
+        return Path(roster_path)
+    search_dir = input_path.parent if input_path.is_file() else input_path
+    matches = sorted(search_dir.glob("RosterReport_*Scouts_parents*.csv"))
+    if not matches:
+        raise FileNotFoundError(
+            "No Scouts' Parents roster export was found beside the progress report exports. "
+            "Provide --roster to point at the correct file."
+        )
+    if len(matches) > 1:
+        print(f"Using latest roster export found in {search_dir}: {matches[-1].name}")
+    return matches[-1]
 
 
 def clean_roster_report(path: Path, encoding: str) -> pd.DataFrame:
@@ -740,6 +708,20 @@ def clean_roster_report(path: Path, encoding: str) -> pd.DataFrame:
     missing = [column for column in required if column not in df.columns]
     if missing:
         raise ValueError(f"Roster report missing columns: {', '.join(missing)}")
+
+    for column in [
+        "Parent/Guardian Name ",
+        "Relationship",
+        "Address",
+        "Den",
+        "Home Phone",
+        "Work Phone",
+        "Mobile Phone",
+        "Email",
+        "Address 2",
+    ]:
+        if column in df.columns:
+            df[column] = df[column].astype(object)
 
     mask_missing_id = df["ID"].isna()
     if mask_missing_id.any():
@@ -1357,34 +1339,30 @@ def render_detail_sections(
     </section>
     """
 
-
-def send_progress_emails(*_: object, **__: object) -> None:
-    raise NotImplementedError("Email delivery is not implemented yet.")
-
-
 def main() -> None:
     args = parse_args()
     input_path = Path(args.input_dir)
-    reports_dir = resolve_reports_dir(input_path, args.reports_dir)
-    files = load_files(input_path, args.pattern)
+    roster_path = resolve_roster_path(input_path, args.roster)
+    reports_dir = resolve_reports_dir(input_path)
+    files = load_files(input_path)
     if not files:
         raise FileNotFoundError(
-            f"No files matching pattern '{args.pattern}' found under {args.input_dir}."
+            f"No files matching pattern '{DEFAULT_PATTERN}' found under {args.input_dir}."
         )
     if not has_aol_export(files):
         print(f"No AOL progress export found under {args.input_dir}; continuing without AOL reports.")
 
     all_records: List[Dict[str, object]] = []
     for file_path in files:
-        all_records.extend(process_rank_file(file_path, args.encoding))
+        all_records.extend(process_rank_file(file_path, DEFAULT_INPUT_ENCODING))
 
     if not all_records:
         raise RuntimeError("No progress records were extracted. Check the source CSV structure.")
 
     df = pd.DataFrame(all_records)
-    df = merge_parent_contacts(df, Path(args.roster), args.encoding)
+    df = merge_parent_contacts(df, roster_path, DEFAULT_INPUT_ENCODING)
 
-    output_path = Path(args.output)
+    output_path = resolve_output_path(input_path, args.output)
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
     sort_cols = [
@@ -1405,18 +1383,17 @@ def main() -> None:
             if args.report_date
             else dt.date.today()
         )
-        adventure_catalog = load_adventure_requirements(Path(args.adventure_json))
+        adventure_catalog = load_adventure_requirements(DEFAULT_ADVENTURE_JSON)
         email_sender = None
         if args.send_email:
             preview_recipient = None
             if not args.send_to_parents:
                 preview_recipient = args.preview_recipient.strip() if args.preview_recipient else None
             email_sender = build_summary_email_sender(
-                client_secret=args.gmail_client_secret,
-                token_path=args.gmail_token,
+                client_secret=DEFAULT_GMAIL_CLIENT_SECRET,
+                token_path=DEFAULT_GMAIL_TOKEN,
                 from_name=args.from_name,
                 from_email=args.from_email,
-                reply_to=args.reply_to,
                 preview_recipient=preview_recipient,
                 max_emails=args.max_emails,
             )
