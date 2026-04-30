@@ -1,5 +1,6 @@
 # Patterns ignored by scan_pii.py (Presidio hook)
 README.md
+SETUP.md
 adventure_requirements.json
 archive/README.md
 archive/helpers/fix_roster.py
@@ -8,6 +9,7 @@ archive/historical/2025/graduation_campout/generate_emails_to_leaders.py
 archive/historical/2025/wolf_awards/pivot_awards.py
 create_mail_merge.ipynb
 family_talent/remind_missing_talents.py
+gmail_oauth.py
 generate_roster_checklist.py
 member_notices/notify_renewals_and_lapses.py
 progress_reports/create_progress_reports.py

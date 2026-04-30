@@ -39,14 +39,26 @@ If the dated folder contains exactly one matching `RosterReport_*Scouts_parents*
 
 Use `--roster` only when the folder contains multiple roster exports or the roster lives elsewhere.
 
+Remote-safe Gmail auth is also available for Codespaces or Colab:
+
+```powershell
+F:/Scouts/.venv/Scripts/python.exe progress_reports/create_progress_reports.py \
+  --input progress_reports/2026-03 \
+  --send-email \
+  --gmail-client-secret .secrets/gmail_client_secret.json \
+  --gmail-token .secrets/gmail_token.json \
+  --gmail-auth-mode console
+```
+
 ## Safe sending workflow
 
 - By default, generated HTML files are written to the dated folder's `reports/` subdirectory and no email is sent.
 - Add `--send-email` only after you have local Gmail OAuth credentials available.
+- In Codespaces or Colab, use `--gmail-auth-mode console` so the script prints an auth URL and accepts a pasted code.
 - Without `--send-to-parents`, messages go to the preview recipient so you can proof them first.
 - Add `--send-to-parents` only when you are ready for live delivery.
 - Use `--max-emails` for a small proof batch before a full send.
-- The script expects the repo-standard Gmail credential filenames: `gmail_client_secret.json` and `gmail_token.json`.
+- The default credential filenames are `gmail_client_secret.json` and `gmail_token.json`, but you can now override both paths explicitly.
 
 ## Outputs
 

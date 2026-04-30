@@ -6,7 +6,9 @@ import base64
 import datetime as dt
 import html
 import json
+import os
 import re
+import sys
 from email.message import EmailMessage
 from email.utils import formataddr
 from pathlib import Path
@@ -14,17 +16,15 @@ from typing import Any, Dict, Iterable, List, Optional, Tuple
 
 import pandas as pd
 
-try:  # Optional Gmail dependencies (only needed when --send-email is used)
-    from google.auth.transport.requests import Request
-    from google.oauth2.credentials import Credentials
-    from google_auth_oauthlib.flow import InstalledAppFlow
-    from googleapiclient.discovery import build
+REPO_ROOT = Path(__file__).resolve().parent.parent
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from gmail_oauth import build_gmail_service
+
+try:  # Optional Gmail dependency (only needed when --send-email is used)
     from googleapiclient.errors import HttpError
 except ModuleNotFoundError:  # pragma: no cover - fallback when libs are missing
-    Request = None  # type: ignore[assignment]
-    Credentials = None  # type: ignore[assignment]
-    InstalledAppFlow = None  # type: ignore[assignment]
-    build = None  # type: ignore[assignment]
     HttpError = Exception  # type: ignore[assignment]
 
 
@@ -45,6 +45,7 @@ DEFAULT_OUTPUT_NAME = "progress_report_aggregate.csv"
 DEFAULT_ADVENTURE_JSON = Path("adventure_requirements.json")
 DEFAULT_GMAIL_CLIENT_SECRET = Path("gmail_client_secret.json")
 DEFAULT_GMAIL_TOKEN = Path("gmail_token.json")
+DEFAULT_GMAIL_AUTH_MODE = "auto"
 SKIP_LABELS = {
     "subunit",
     "nextrank",
@@ -160,6 +161,11 @@ def parse_args() -> argparse.Namespace:
         help="Destination CSV for the tall/normalized dataset. Defaults beside the input exports.",
     )
     parser.add_argument(
+        "--reports-dir",
+        type=Path,
+        help="Directory for generated Scout HTML reports. Defaults to <input>/reports/.",
+    )
+    parser.add_argument(
         "--roster",
         type=Path,
         help="Path to the raw Scouts' Parents roster export. Defaults to the matching roster file in --input.",
@@ -203,6 +209,24 @@ def parse_args() -> argparse.Namespace:
         type=int,
         help="Optional cap on the number of emails to send in a single run (useful for testing).",
     )
+    parser.add_argument(
+        "--gmail-client-secret",
+        type=Path,
+        default=Path(os.getenv("PACK500_GMAIL_CLIENT_SECRET", DEFAULT_GMAIL_CLIENT_SECRET)),
+        help="Path to the Google OAuth desktop-app client secret JSON.",
+    )
+    parser.add_argument(
+        "--gmail-token",
+        type=Path,
+        default=Path(os.getenv("PACK500_GMAIL_TOKEN", DEFAULT_GMAIL_TOKEN)),
+        help="Path to the cached Gmail OAuth token JSON.",
+    )
+    parser.add_argument(
+        "--gmail-auth-mode",
+        choices=["auto", "local-server", "console"],
+        default=os.getenv("PACK500_GMAIL_AUTH_MODE", DEFAULT_GMAIL_AUTH_MODE),
+        help="OAuth flow to use when a new Gmail token is needed. Use console for Colab or remote terminals.",
+    )
     return parser.parse_args()
 
 
@@ -242,33 +266,6 @@ def repair_mojibake(value: str) -> str:
         return text
     except UnicodeDecodeError:
         return text
-
-
-def build_gmail_service(client_secret_path: Path, token_path: Path):  # type: ignore[override]
-    if not all([Credentials, InstalledAppFlow, build, Request]):
-        raise ImportError(
-            "Google API libraries are required for --send-email. Install google-auth-oauthlib and google-api-python-client."
-        )
-    client_secret_path = Path(client_secret_path)
-    token_path = Path(token_path)
-    if not client_secret_path.exists():
-        raise FileNotFoundError(
-            f"Gmail OAuth client secret not found at {client_secret_path}."
-        )
-    creds: Optional[Credentials] = None
-    if token_path.exists():
-        creds = Credentials.from_authorized_user_file(str(token_path), GMAIL_SCOPES)
-    if not creds or not creds.valid:
-        if creds and creds.expired and creds.refresh_token:
-            creds.refresh(Request())
-        else:
-            flow = InstalledAppFlow.from_client_secrets_file(
-                str(client_secret_path), GMAIL_SCOPES
-            )
-            creds = flow.run_local_server(port=0)
-        token_path.parent.mkdir(parents=True, exist_ok=True)
-        token_path.write_text(creds.to_json(), encoding="utf-8")
-    return build("gmail", "v1", credentials=creds)
 
 
 class SummaryEmailSender:
@@ -338,12 +335,13 @@ def build_summary_email_sender(
     *,
     client_secret: Path,
     token_path: Path,
+    auth_mode: str,
     from_name: str,
     from_email: str,
     preview_recipient: Optional[str],
     max_emails: Optional[int],
 ) -> SummaryEmailSender:
-    service = build_gmail_service(client_secret, token_path)
+    service = build_gmail_service(client_secret, token_path, GMAIL_SCOPES, auth_mode=auth_mode)
     return SummaryEmailSender(
         service=service,
         from_name=from_name,
@@ -653,7 +651,9 @@ def has_aol_export(files: Iterable[Path]) -> bool:
     return any(normalize_label(guess_rank_name(path)) == "arrowoflight" for path in files)
 
 
-def resolve_reports_dir(input_path: Path) -> Path:
+def resolve_reports_dir(input_path: Path, reports_dir: Optional[Path]) -> Path:
+    if reports_dir is not None:
+        return Path(reports_dir)
     base_dir = input_path.parent if input_path.is_file() else input_path
     return base_dir / "reports"
 
@@ -1343,7 +1343,7 @@ def main() -> None:
     args = parse_args()
     input_path = Path(args.input_dir)
     roster_path = resolve_roster_path(input_path, args.roster)
-    reports_dir = resolve_reports_dir(input_path)
+    reports_dir = resolve_reports_dir(input_path, args.reports_dir)
     files = load_files(input_path)
     if not files:
         raise FileNotFoundError(
@@ -1390,8 +1390,9 @@ def main() -> None:
             if not args.send_to_parents:
                 preview_recipient = args.preview_recipient.strip() if args.preview_recipient else None
             email_sender = build_summary_email_sender(
-                client_secret=DEFAULT_GMAIL_CLIENT_SECRET,
-                token_path=DEFAULT_GMAIL_TOKEN,
+                client_secret=args.gmail_client_secret,
+                token_path=args.gmail_token,
+                auth_mode=args.gmail_auth_mode,
                 from_name=args.from_name,
                 from_email=args.from_email,
                 preview_recipient=preview_recipient,

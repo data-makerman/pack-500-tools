@@ -8,6 +8,8 @@ import datetime as dt
 import html
 import io
 import logging
+import os
+import sys
 from dataclasses import dataclass
 from email import policy
 from email.message import EmailMessage
@@ -17,17 +19,15 @@ from typing import Iterable, List, Optional, Sequence
 
 import pandas as pd
 
-try:  # Optional Gmail dependencies, only needed when --send-email is provided
-    from google.auth.transport.requests import Request
-    from google.oauth2.credentials import Credentials
-    from google_auth_oauthlib.flow import InstalledAppFlow
-    from googleapiclient.discovery import build
+REPO_ROOT = Path(__file__).resolve().parent.parent
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from gmail_oauth import build_gmail_service
+
+try:  # Optional Gmail dependency, only needed when --send-email is provided
     from googleapiclient.errors import HttpError
 except ModuleNotFoundError:  # pragma: no cover - allow running without Google libs
-    Request = None  # type: ignore[assignment]
-    Credentials = None  # type: ignore[assignment]
-    InstalledAppFlow = None  # type: ignore[assignment]
-    build = None  # type: ignore[assignment]
     HttpError = Exception  # type: ignore[assignment]
 
 
@@ -37,6 +37,7 @@ DEFAULT_PREVIEW_RECIPIENT = DEFAULT_FROM_EMAIL
 DEFAULT_INPUT_ENCODING = "latin-1"
 DEFAULT_GMAIL_CLIENT_SECRET = Path("gmail_client_secret.json")
 DEFAULT_GMAIL_TOKEN = Path("gmail_token.json")
+DEFAULT_GMAIL_AUTH_MODE = "auto"
 GMAIL_SCOPES = ["https://www.googleapis.com/auth/gmail.send"]
 EMAIL_SIGNATURE = (
     f"~{DEFAULT_FROM_NAME}\n"
@@ -136,6 +137,24 @@ def parse_args() -> argparse.Namespace:
         "--max-emails",
         type=int,
         help="Optional cap on the number of messages to send in one run.",
+    )
+    parser.add_argument(
+        "--gmail-client-secret",
+        type=Path,
+        default=Path(os.getenv("PACK500_GMAIL_CLIENT_SECRET", DEFAULT_GMAIL_CLIENT_SECRET)),
+        help="Path to the Google OAuth desktop-app client secret JSON.",
+    )
+    parser.add_argument(
+        "--gmail-token",
+        type=Path,
+        default=Path(os.getenv("PACK500_GMAIL_TOKEN", DEFAULT_GMAIL_TOKEN)),
+        help="Path to the cached Gmail OAuth token JSON.",
+    )
+    parser.add_argument(
+        "--gmail-auth-mode",
+        choices=["auto", "local-server", "console"],
+        default=os.getenv("PACK500_GMAIL_AUTH_MODE", DEFAULT_GMAIL_AUTH_MODE),
+        help="OAuth flow to use when a new Gmail token is needed. Use console for Colab or remote terminals.",
     )
     return parser.parse_args()
 
@@ -389,28 +408,6 @@ def format_preview_subject(subject: str, intended: Optional[str], *, preview: bo
     return f"{subject} (intended for {label})"
 
 
-def build_gmail_service(client_secret_path: Path, token_path: Path):  # type: ignore[override]
-    if not all([Credentials, InstalledAppFlow, build, Request]):
-        raise RuntimeError(
-            "Google API dependencies are not installed. Please pip install google-auth-oauthlib google-api-python-client."
-        )
-    client_secret_path = Path(client_secret_path)
-    token_path = Path(token_path)
-    if not client_secret_path.exists():
-        raise FileNotFoundError(f"Missing Gmail client secret: {client_secret_path}")
-    creds: Optional[Credentials] = None
-    if token_path.exists():
-        creds = Credentials.from_authorized_user_file(str(token_path), GMAIL_SCOPES)
-    if not creds or not creds.valid:
-        if creds and creds.expired and creds.refresh_token:
-            creds.refresh(Request())
-        else:
-            flow = InstalledAppFlow.from_client_secrets_file(str(client_secret_path), GMAIL_SCOPES)
-            creds = flow.run_local_server(port=0)
-        token_path.write_text(creds.to_json())
-    return build("gmail", "v1", credentials=creds)
-
-
 class SummaryEmailSender:
     def __init__(
         self,
@@ -523,7 +520,12 @@ def main() -> None:
 
     sender: Optional[SummaryEmailSender] = None
     if args.send_email:
-        service = build_gmail_service(DEFAULT_GMAIL_CLIENT_SECRET, DEFAULT_GMAIL_TOKEN)
+        service = build_gmail_service(
+            args.gmail_client_secret,
+            args.gmail_token,
+            GMAIL_SCOPES,
+            auth_mode=args.gmail_auth_mode,
+        )
         sender = SummaryEmailSender(
             service=service,
             from_name=args.from_name,

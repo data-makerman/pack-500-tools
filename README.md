@@ -2,6 +2,16 @@
 
 Pack 500 Tools is a small collection of scripts for turning Scoutbook Plus and other Scouting exports into parent-facing reports, printable checklists, and operational follow-up lists.
 
+## Handoff and setup
+
+The repo now includes a handoff-oriented setup path for the next Cubmaster:
+
+- `SETUP.md`: first-time setup for GitHub Codespaces, local Python, and one-off Google Colab runs.
+- `.devcontainer/devcontainer.json`: Codespaces definition.
+- `requirements.txt`: runtime dependencies for the main scripts.
+
+Recommended default: use GitHub Codespaces and store Gmail OAuth files under `.secrets/`.
+
 ## Start Here
 
 If you need to do something in this repo, start with one of these entry points:
@@ -34,7 +44,7 @@ Historical and one-off helpers now live under `archive/`. See `archive/README.md
 
 ## Recommended setup
 
-1. Create a Python environment and install the libraries required by the scripts you plan to run.
+1. Create a Python environment and install `requirements.txt`.
 2. Install pre-commit and enable hooks with `pre-commit install`.
 3. Keep all live exports and credentials outside git-tracked paths unless they have been explicitly sanitized.
 4. Before publishing, run `pre-commit run --all-files` and review the git diff for any newly introduced names, emails, or report output.

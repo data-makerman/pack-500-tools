@@ -176,6 +176,7 @@ cython_debug/
 
 # Local virtual environments
 .venv/
+.secrets/
 
 # Pack 500 report exports containing PII. Store sanitized fixtures under sample_data/.
 *.csv
